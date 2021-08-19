@@ -1,4 +1,0 @@
-CPUTYPE = 040
-LIBS = -lND -lsys_s
-CRT0 = -lcrt0.o
-RANLIB = ranlib -s
