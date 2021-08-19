@@ -1,0 +1,14 @@
+#! /bin/sh
+
+# create an initialization procedure from a list of .o files
+
+echo '/* Do not modify this file.  It is created automatically by "munch". */'
+echo 'void initialize_all_files () {'
+
+		# for usg use nm -p, grep for _initialize, 
+		# don't delete leading '_'
+		nmi860 -p $* | \
+		grep 'T __initialize_' | \
+		sed -e 's/^.*T _\(.*\)/    \1 ();/'
+
+echo '}'

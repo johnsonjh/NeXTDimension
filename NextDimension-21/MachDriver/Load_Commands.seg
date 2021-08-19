@@ -1,0 +1,27 @@
+#
+# Script used for initializing the loadable kernel server to load
+# the NextDimension driver
+#
+
+CALL		ND_init		0
+
+PORT_DEATH	ND_port_death
+
+# Associate ports with proc/arg
+
+HMAP	NextDimension			ND_msg		0
+
+#
+# Publish the ports through the net name server.
+#
+ADVERTISE	NextDimension
+# Server contains interrupt handler code, and so must be wired down
+WIRE
+
+# Start this server up when PostScript asks for it.
+#START
+
+
+
+
+

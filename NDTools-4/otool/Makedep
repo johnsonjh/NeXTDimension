@@ -1,0 +1,14 @@
+otool.o : otool.c /usr/include/stdio.h /usr/include/stddef.h \
+  /usr/include/stdarg.h /usr/include/sys/file.h /usr/include/sys/fcntl.h \
+  /usr/include/sys/types.h /usr/include/sys/stat.h ../include/a.out.h \
+  ../include/i860.h ../include/ldsyms.h /usr/include/objc/objc-runtime.h \
+  /usr/include/objc/objc.h /usr/include/objc/objc-class.h \
+  /usr/include/objc/hashtable.h /usr/include/streams/streams.h \
+  /usr/include/sys/port.h /usr/include/sys/features.h \
+  /usr/include/objc/error.h /usr/include/setjmp.h /usr/include/sys/loader.h \
+  ../include/sys/machine.h /usr/include/vm/vm_param.h \
+  /usr/include/machine/vm_param.h /usr/include/machine/vm_types.h \
+  /usr/include/sys/boolean.h /usr/include/machine/boolean.h \
+  /usr/include/vm/vm_prot.h ../include/machine/thread_status.h \
+  /usr/include/next/reg.h /usr/include/ar.h /usr/include/ranlib.h \
+  ../include/symseg.h ../as/i860-opcode.h 

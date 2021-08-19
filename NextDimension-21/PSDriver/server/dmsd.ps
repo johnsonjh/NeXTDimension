@@ -1,0 +1,126 @@
+%  dmsd.ps  -- IIC bus initialization for video parts
+
+%% saa7192 DCSC YUV->RGB, 4:2:2 -> 4:4:4 setup
+% phil bernosky
+% 6/28/90
+
+/iicsendbytes statusdict /nd_iicsendbytes get def
+
+% e0    the adress of the DCSC chip
+% 00    the subadress, setup register
+% 2a    0011 1010 = dmsd clk, vlut write en, out enabled, input data to
+%       to formatter, format 0, 1 bit dmsd
+
+<e0 00 2a> iicsendbytes
+
+% e0    the adress of the DCSC chip
+% 01    the subadress, look up table
+% Gamma of 1.7
+<e0
+ 01
+ 00 00 00 00 00 00 00 01 01 01 01 01 01 02 02 02
+ 02 03 03 03 03 04 04 04 05 05 05 06 06 06 07 07
+ 07 08 08 09 09 0a 0a 0a 0b 0b 0c 0c 0d 0d 0e 0e
+ 0f 0f 10 11 11 12 12 13 13 14 15 15 16 16 17 18
+ 18 19 1a 1a 1b 1c 1c 1d 1e 1e 1f 20 21 21 22 23
+ 24 24 25 26 27 27 28 29 2a 2b 2b 2c 2d 2e 2f 30
+ 30 31 32 33 34 35 36 37 38 38 39 3a 3b 3c 3d 3e
+ 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e
+ 4f 50 51 52 53 54 55 56 58 59 5a 5b 5c 5d 5e 5f
+ 61 62 63 64 65 66 67 69 6a 6b 6c 6d 6f 70 71 72
+ 73 75 76 77 78 7a 7b 7c 7d 7f 80 81 83 84 85 86
+ 88 89 8a 8c 8d 8e 90 91 92 94 95 97 98 99 9b 9c
+ 9d 9f a0 a2 a3 a4 a6 a7 a9 aa ac ad ae b0 b1 b3
+ b4 b6 b7 b9 ba bc bd bf c0 c2 c3 c5 c6 c8 c9 cb
+ cd ce d0 d1 d3 d4 d6 d8 d9 db dc de e0 e1 e3 e4
+ e6 e8 e9 eb ed ee f0 f2 f3 f5 f7 f8 fa fc fd ff
+> iicsendbytes
+
+% read enabled
+< e0 00  6a>  iicsendbytes
+
+%% saa7192 RGB->RGB(gamma'd)
+% phil bernosky
+% 6/30/90
+%<e2    % the adress of the DCSC chip
+% 00    % the subadress, setup register
+% 34    % 0010 1010 = dmsd clk, vlut write en, out enabled, input data to
+%       %       to formatter, format 3, 1 bit dmsd
+%> iicsendbytes % send the register
+
+<e2 00 34> iicsendbytes
+
+%<e2    % the adress of the DCSC chip
+% 01    % subadress, look up table
+% % this is the look up table.  For now, just 1.7
+<e2
+ 01
+ 00 0a  f 13 16 19 1c 1f 21 24 26 28 2a 2c 2e 30
+ 32 34 36 37 39 3b 3c 3e 40 41 43 44 46 47 48 4a
+ 4b 4d 4e 4f 51 52 53 54 56 57 58 59 5b 5c 5d 5e
+ 5f 61 62 63 64 65 66 67 69 6a 6b 6c 6d 6e 6f 70
+ 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80
+ 81 82 83 84 85 86 87 87 88 89 8a 8b 8c 8d 8e 8f
+ 90 90 91 92 93 94 95 96 96 97 98 99 9a 9b 9c 9c
+ 9d 9e 9f a0 a0 a1 a2 a3 a4 a4 a5 a6 a7 a8 a8 a9
+ aa ab ac ac ad ae af af b0 b1 b2 b2 b3 b4 b5 b5
+ b6 b7 b8 b8 b9 ba bb bb bc bd be be bf c0 c0 c1
+ c2 c3 c3 c4 c5 c5 c6 c7 c7 c8 c9 ca ca cb cc cc
+ cd ce ce cf d0 d0 d1 d2 d2 d3 d4 d4 d5 d6 d6 d7
+ d8 d8 d9 da da db dc dc dd de de df e0 e0 e1 e2
+ e2 e3 e3 e4 e5 e5 e6 e7 e7 e8 e9 e9 ea ea eb ec
+ ec ed ee ee ef ef f0 f1 f1 f2 f2 f3 f4 f4 f5 f5
+ f6 f7 f7 f8 f8 f9 fa fa fb fb fc fd fd fe fe ff
+> iicsendbytes  % transmit the LUT
+
+<e2 00 74>  iicsendbytes
+
+/iic_send {
+    counttomark dup string /iicstr exch def 
+    1 sub -1 0 { exch iicstr 3 1 roll put } for
+    iicstr statusdict /nd_iicsendbytes get exec
+    pop % pop the mark
+} def
+
+%% saa7191 decoder chip control data.
+%  PjB 7%18%90
+5 {
+mark
+16#8a   % the adress
+16#00   % the sub adress
+        % the data (remember, everything is in hex)
+16#50   % incremental delay time, ? us
+16#30   % hsyB start time
+16#00   % hsyS stop time
+16#78   % hclB start time
+16#b6   % hclS stop time
+16#f2   % hs start time after phi1
+16#38   % CTBS PREF BPSS1 BPSS0 | CORI1 CORI0 APER1 APER0 = 0000 | 0011 =
+        %
+16#00   % HUE control
+16#fe   % Color killer threshold QAM
+        %
+16#f0   % Color kill threshold SECAM
+        %
+16#fe   % Sensitivity PAL switch
+16#e0   % Gain Control: COL0 LFIS1 LFIS0 CGFX | AMPF3 AMPF2 AMPF1 AMPF0
+16#a0   % Stand%Mode control: VTRC GPSW CVDI SUVI | ASTD CSTD2 CSTD1 CSTD0
+16#00   % IO and clock cntrl: HPLL CHSB OEHS OEVS | OEDA CHRS GPSW3 GPSW2
+16#78   % IO and clock cntrl #3: AUFD FSEL SXCR SCEN | OFTS YDEL2 YDEL1 YDEL0
+16#59   % IO and clock cntrl #4: X X X X X CCIR VNOI1 VNOI0
+16#03   % Chrominance Control Value
+16#20
+16#00
+16#00
+16#34
+16#0a
+16#f4
+16#ce
+16#f8
+
+iic_send
+
+} repeat
+
+currentdict /iic_send undef
+currentdict /iicsendbytes undef

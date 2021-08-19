@@ -1,0 +1,206 @@
+/*
+ * Copyright 1990 NeXT, Inc.
+ *
+ * NextDimension Prototype kernel server.
+ *
+ */
+
+#include <std_types.defs>
+#include "ND/ND_id.h"
+
+import "ND/ND_types.h";
+import <mach_types.h>;
+
+subsystem ND ND_KERNEL_SUBSYS_START;
+
+serverprefix ND_;
+userprefix ND_;
+
+type	String256	= (MSG_TYPE_STRING,8*256);
+type	ROMData		= array [*:1024] of char;
+
+/* For memory mapper services */
+type vm_address_t = int;
+type vm_offset_t = int;
+type vm_size_t = int;
+
+/*
+ * Device port messages.
+ */
+/*
+ * Establish ownership.
+ */
+routine SetOwner (
+		device_port	: port_t;
+		unit		: int;
+		owner_port	: port_t;
+	inout	negotiation_port: port_t);
+
+/*
+ * Establish the debug port.
+ */
+routine SetDebug(
+		device_port	: port_t;
+		unit		: int;
+		debug_port	: port_t);
+/*
+ * Send console input to the NextDimension runtime monitor.
+ * This function is called as a result of an interrupt message from the board.
+ */
+simpleroutine ConsoleInput (
+		device_port	: port_t;
+		unit		: int;
+		data		: String256;
+		length		: int );
+/*
+ * Given a port in our task's set, what port does the kernel
+ * think it is.  This is used to fake up the kernel's port_t 
+ * entries in a message when we bypass the kernel in NDmsg_send.
+ */
+routine PortTranslate(
+		device_port	: port_t;
+		app_port	: port_t;
+	out	kernel_value	: int );
+/* 
+ * Reset the message system interface to the ND board.
+ * This is used when booting a new ND kernel and during test and debug.
+ * This also has to be done synchronously, so it's a routine and not a 
+ * simpleroutine.
+ */
+routine ResetMessageSystem(
+		device_port	: port_t;
+		unit		: int;
+		owner_port	: port_t );
+/*
+ * Have the specified device register it's cursor support code with the
+ * ev driver.
+ */
+routine RegisterThyself(
+		device_port	: port_t;
+		unit		: int;
+		NXSDevice	: int;
+		Min_X		: int;
+		Max_X		: int;
+		Min_Y		: int;
+		Max_Y		: int );
+/*
+ * Get the ND kernel port for the specified NextDimension unit.
+ */
+routine GetKernelPort(
+		device_port	: port_t;
+		unit		: int;
+	out	kernel_port	: port_t );
+	
+/*
+ * Get a bit pattern indicating which slots have ND boards in them.
+ */
+routine GetBoardList(
+		device_port	: port_t;
+	out	BoardList	: int );
+/*
+ *	General purpose memory mapper.		This should be a 'skip' in the release.
+ */
+routine vm_mapper(
+		device_port	: port_t;
+		owner_port	: port_t;
+		task_port	: port_t;
+	out	vaddrp		: vm_address_t;
+		paddr		: vm_address_t;
+		size		: vm_size_t );
+		
+/*
+ * Memory mappers for interesting things on the ND board.
+ */
+routine MapFramebuffer(
+		device_port	: port_t;
+		owner_port	: port_t;
+		task_port	: port_t;
+		unit		: int;
+	out	vaddrp		: vm_address_t;
+	out	sizep		: vm_size_t );
+
+routine MapCSR(
+		device_port	: port_t;
+		owner_port	: port_t;
+		task_port	: port_t;
+		unit		: int;
+	out	vaddrp		: vm_address_t;
+	out	sizep		: vm_size_t );
+
+routine MapDRAM(
+		device_port	: port_t;
+		owner_port	: port_t;
+		task_port	: port_t;
+		unit		: int;
+	out	vaddrp		: vm_address_t;
+	out	sizep		: vm_size_t );
+
+routine MapGlobals(
+		device_port	: port_t;
+		owner_port	: port_t;
+		task_port	: port_t;
+		unit		: int;
+	out	vaddrp		: vm_address_t;
+	out	sizep		: vm_size_t );
+
+routine MapHostToNDbuffer(
+		device_port	: port_t;
+		owner_port	: port_t;
+		task_port	: port_t;
+		unit		: int;
+	out	vaddrp		: vm_address_t;
+	out	sizep		: vm_size_t );
+/*
+ *	Look up a port advertized by name by a thread running on the i860
+ */
+routine Port_look_up (
+		device_port	: port_t;
+		unit		: int;
+		name		: String256;
+	out	port_ptr	: port_t );
+#if ! defined(PROTOTYPE)
+/*
+ * Another memory mapper.  This one maps in the BrookTree 463 RAMDAC
+ */
+routine MapBT463(
+		device_port	: port_t;
+		owner_port	: port_t;
+		task_port	: port_t;
+		unit		: int;
+	out	vaddrp		: vm_address_t;
+	out	sizep		: vm_size_t );
+
+routine MapBootDRAM(
+		device_port	: port_t;
+		owner_port	: port_t;
+		task_port	: port_t;
+		unit		: int;
+	out	vaddrp		: vm_address_t;
+	out	sizep		: vm_size_t );
+
+/*
+ * EEROM programming tools.
+ */
+routine ROM_Identifier(
+		device_port	: port_t;
+		unit		: int;
+	out	manufacturer	: int;
+	out	device		: int );
+
+routine ROM_Erase(
+		device_port	: port_t;
+		unit		: int );
+
+routine ROM_Program(
+		device_port	: port_t;
+		unit		: int;
+		start_addr	: int;
+		data		: ROMData );
+
+routine ROM_CheckSum(
+		device_port	: port_t;
+		unit		: int;
+	out	checksum	: int;
+	out	record_sum	: int );
+
+#endif /* !PROTOTYPE */

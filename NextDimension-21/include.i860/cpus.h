@@ -1,0 +1,1 @@
+#define NCPUS 1

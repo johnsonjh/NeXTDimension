@@ -1,0 +1,42 @@
+This is GDB, a source-level debugger intended for GNU,
+presently running under un*x.
+
+Before compiling GDB, you must set up links to five files according to
+the kind of machine you are running on.  To do this, type `config.gdb
+machine', where machine is something like `vax' or `sun2'.  This
+creates links named `param.h', `opcode.h', `pinsn.c', and `infdep.c'.
+
+Once these files are set up, just `make' will do everything,
+producing an executable `gdb' in this directory.
+
+About the machine-dependent files...
+
+m-<machine>.h
+
+This file contains macro definitions that express information
+about the machine's registers, stack frame format and instructions.
+
+<machine>-opcode.h, <machine>-pinsn.c
+These files contain the information necessary to print instructions
+for your cpu type.
+
+<machine>-dep.c
+Those routines which provide a low level interface to ptrace and which
+tend to be machine-dependent.  (The machine-independent routines are in
+`infrun.c' and `inflow.c')
+
+About debugging gdb with itself . . .
+
+You probably want to do a "make TAGS" after you configure your
+distribution; this will put the machine dependent routines for your
+local machine where they will be accessed first by a M-period .
+
+Also, you want to make sure that gdb is not compiled with shared
+libraries on the Sun 4.  And you want to make sure that you've
+compiled gdb with your local cc or taken appropriate precautions
+regarding ansification of include files.  See the Makefile for more
+information. 
+
+The "info" command, when executed without a subcommand in a gdb being
+debugged by gdb, will pop you back up to the top level gdb.  See
+.gdbinit for more details.

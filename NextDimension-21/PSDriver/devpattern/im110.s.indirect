@@ -1,0 +1,3138 @@
+	.text
+	nop	// FIR - 4 pager check value
+gcc_compiled.:
+	.stabs "im110.c",100,0,0,Ltext
+Ltext:
+.stabs "int:t1=r1;-2147483648;2147483647;",128,0,0,0
+.stabs "char:t2=r2;0;127;",128,0,0,0
+.stabs "long int:t3=r1;-2147483648;2147483647;",128,0,0,0
+.stabs "unsigned int:t4=r1;0;-1;",128,0,0,0
+.stabs "long unsigned int:t5=r1;0;-1;",128,0,0,0
+.stabs "short int:t6=r1;-32768;32767;",128,0,0,0
+.stabs "long long int:t7=r1;0;-1;",128,0,0,0
+.stabs "short unsigned int:t8=r1;0;65535;",128,0,0,0
+.stabs "long long unsigned int:t9=r1;0;-1;",128,0,0,0
+.stabs "signed char:t10=r1;-128;127;",128,0,0,0
+.stabs "unsigned char:t11=r1;0;255;",128,0,0,0
+.stabs "float:t12=r1;4;0;",128,0,0,0
+.stabs "double:t13=r1;8;0;",128,0,0,0
+.stabs "long double:t14=r1;8;0;",128,0,0,0
+.stabs "void:t15=15",128,0,0,0
+.stabs "boolean:t4",128,0,0,0
+.stabs "Int8:t2",128,0,0,0
+.stabs "PInt8:t16=*2",128,0,0,0
+.stabs "Int16:t6",128,0,0,0
+.stabs "PInt16:t17=*6",128,0,0,0
+.stabs "Int32:t3",128,0,0,0
+.stabs "PInt32:t18=*3",128,0,0,0
+.stabs "integer:t3",128,0,0,0
+.stabs "PIntProc:t19=*20=f3",128,0,0,0
+.stabs "Card8:t11",128,0,0,0
+.stabs "PCard8:t21=*11",128,0,0,0
+.stabs "Card16:t8",128,0,0,0
+.stabs "PCard16:t22=*8",128,0,0,0
+.stabs "Card32:t5",128,0,0,0
+.stabs "PCard32:t23=*5",128,0,0,0
+.stabs "cardinal:t8",128,0,0,0
+.stabs "longcardinal:t5",128,0,0,0
+.stabs "BitField:t4",128,0,0,0
+.stabs "real:t12",128,0,0,0
+.stabs "Preal:t24=*12",128,0,0,0
+.stabs "longreal:t13",128,0,0,0
+.stabs "Fixed:t3",128,0,0,0
+.stabs "Component:t12",128,0,0,0
+.stabs "_t_Cd:T25=s8x:12,0,32;y:12,32,32;;",128,0,0,0
+.stabs "Cd:t25",128,0,0,0
+.stabs "PCd:t26=*25",128,0,0,0
+.stabs "RCd:t25",128,0,0,0
+.stabs "PRCd:t26",128,0,0,0
+.stabs "_t_FCd:T27=s8x:3,0,32;y:3,32,32;;",128,0,0,0
+.stabs "FCd:t27",128,0,0,0
+.stabs "PFCd:t28=*27",128,0,0,0
+.stabs "_t_DevCd:T29=s8x:3,0,32;y:3,32,32;;",128,0,0,0
+.stabs "DevCd:t29",128,0,0,0
+.stabs "PDevCd:t30=*29",128,0,0,0
+.stabs "character:t11",128,0,0,0
+.stabs "string:t21",128,0,0,0
+.stabs "charptr:t21",128,0,0,0
+.stabs "PVoidProc:t31=*32=f15",128,0,0,0
+.stabs "GenericID:t33=u4id:34=s4index:1,0,10;generation:1,10,22;;,0,32;\\",128,0,0,0
+.stabs "stamp:5,0,32;;",128,0,0,0
+.stabs "Switches:t35=s8_ISP:11,0,8;_OS:11,8,8;\\",128,0,0,0
+.stabs "_STAGE:11,16,8;_LANGUAGE_LEVEL:11,24,8;_SWAPBITS:11,32,8;\\",128,0,0,0
+.stabs "_PREFERREDALIGN:11,40,8;unused:36=ar1;0;1;11,48,16;;",128,0,0,0
+.stabs "FloatRep:t37=u4native:12,0,32;ieee:38=s4sign:1,0,1;\\",128,0,0,0
+.stabs "exponent:1,1,8;fraction:1,9,23;;,0,32;\\",128,0,0,0
+.stabs "bytes:39=ar1;0;3;11,0,32;;",128,0,0,0
+.stabs "Frac:t3",128,0,0,0
+.stabs "UFrac:t3",128,0,0,0
+.stabs "_t_Int64:T40=s8h:3,0,32;l:5,32,32;;",128,0,0,0
+.stabs "Int64:t40",128,0,0,0
+.stabs "PInt64:t41=*40",128,0,0,0
+.stabs "_t_Mtx:T42=s24a:12,0,32;b:12,32,32;\\",128,0,0,0
+.stabs "c:12,64,32;d:12,96,32;tx:12,128,32;\\",128,0,0,0
+.stabs "ty:12,160,32;;",128,0,0,0
+.stabs "Mtx:t42",128,0,0,0
+.stabs "PMtx:t43=*42",128,0,0,0
+.stabs "PDevice:t44=*45=xs_t_Device:",128,0,0,0
+.stabs "DevShort:t6",128,0,0,0
+.stabs "DevLong:t3",128,0,0,0
+.stabs "DevFixed:t3",128,0,0,0
+.stabs "DevUnsigned:t8",128,0,0,0
+.stabs "DevUnique:t6",128,0,0,0
+.stabs "DevPrivate:t11",128,0,0,0
+.stabs "_t_DevInterval:T46=s4l:6,0,16;g:6,16,16;;",128,0,0,0
+.stabs "DevInterval:t46",128,0,0,0
+.stabs "_t_DevBounds:T47=s8x:46,0,32;y:46,32,32;;",128,0,0,0
+.stabs "DevBounds:t47",128,0,0,0
+.stabs "_t_DevLInterval:T48=s8l:3,0,32;g:3,32,32;;",128,0,0,0
+.stabs "DevLInterval:t48",128,0,0,0
+.stabs "_t_DevLBounds:T49=s16x:48,0,64;y:48,64,64;;",128,0,0,0
+.stabs "DevLBounds:t49",128,0,0,0
+.stabs "_t_DevPoint:T50=s8x:3,0,32;y:3,32,32;;",128,0,0,0
+.stabs "DevPoint:t50",128,0,0,0
+.stabs "_t_DevFixedPoint:T51=s8x:3,0,32;y:3,32,32;;",128,0,0,0
+.stabs "DevFixedPoint:t51",128,0,0,0
+.stabs "_t_DevTrapEdge:T52=s12xl:6,0,16;xg:6,16,16;\\",128,0,0,0
+.stabs "ix:3,32,32;dx:3,64,32;;",128,0,0,0
+.stabs "DevTrapEdge:t52",128,0,0,0
+.stabs "_t_DevTrap:T53=s28y:46,0,32;l:52,32,96;\\",128,0,0,0
+.stabs "g:52,128,96;;",128,0,0,0
+.stabs "DevTrap:t53",128,0,0,0
+.stabs "_t_DevRun:T54=s20bounds:47,0,64;datalen:6,64,16;\\",128,0,0,0
+.stabs "data:17,96,32;indx:17,128,32;;",128,0,0,0
+.stabs "DevRun:t54",128,0,0,0
+.stabs "_t_MaskRec:T55=s12width:8,0,16;height:8,16,16;\\",128,0,0,0
+.stabs "data:21,32,32;cached:1,64,1;unused:1,65,15;\\",128,0,0,0
+.stabs "maskID:8,80,16;;",128,0,0,0
+.stabs "MaskRec:t55",128,0,0,0
+.stabs "PMask:t56=*55",128,0,0,0
+.stabs "_t_DevMask:T57=s12dc:50,0,64;mask:56,64,32;;",128,0,0,0
+.stabs "DevMask:t57",128,0,0,0
+.stabs "DevGamutTransfer:t58=*59=xs_t_DevGamutTransferRec:",128,0,0,0
+.stabs "DevRendering:t60=*61=xs_t_DevRenderingRec:",128,0,0,0
+.stabs "_t_DevImSampleDecode:T62=s8min:12,0,32;max:12,32,32;;",128,0,0,0
+.stabs "DevImSampleDecode:t62",128,0,0,0
+.stabs "_t_DevImageSource:T63=s28samples:64=*21,0,32;decode:65=*62,32,32;\\",128,0,0,0
+.stabs "colorSpace:6,64,16;nComponents:6,80,16;sourceID:6,96,16;\\",128,0,0,0
+.stabs "wbytes:6,112,16;height:6,128,16;bitspersample:11,144,8;\\",128,0,0,0
+.stabs "interleaved:11,152,8;sampleProc:31,160,32;procData:16,192,32;;",128,0,0,0
+.stabs "DevImageSource:t63",128,0,0,0
+.stabs "_t_DevImageInfo:T66=s28mtx:43,0,32;sourcebounds:47,32,64;\\",128,0,0,0
+.stabs "sourceorigin:50,96,64;trap:67=*53,160,32;trapcnt:6,192,16;;",128,0,0,0
+.stabs "DevImageInfo:t66",128,0,0,0
+.stabs "_t_DevTfrFcn:T68=s28priv:21,0,32;white:21,32,32;\\",128,0,0,0
+.stabs "red:21,64,32;green:21,96,32;blue:21,128,32;\\",128,0,0,0
+.stabs "ucr:17,160,32;bg:21,192,32;;",128,0,0,0
+.stabs "DevTfrFcn:t68",128,0,0,0
+.stabs "_t_DevImage:T69=s48info:66,0,224;imagemask:1,224,8;\\",128,0,0,0
+.stabs "invert:1,232,8;unused:6,240,16;transfer:70=*68,256,32;\\",128,0,0,0
+.stabs "source:71=*63,288,32;gt:58,320,32;r:60,352,32;;",128,0,0,0
+.stabs "DevImage:t69",128,0,0,0
+.stabs "DevPrimType:t72=enoneType:0,trapType:1,runType:2,maskType:3,\\",128,0,0,0
+.stabs "imageType:4,;",128,0,0,0
+.stabs "_t_DevPrim:T73=s36type:72,0,32;bounds:47,32,64;\\",128,0,0,0
+.stabs "next:74=*73,96,32;xaOffset:50,128,64;priv:21,192,32;\\",128,0,0,0
+.stabs "items:6,224,16;maxItems:6,240,16;value:75=u4value:21,0,32;\\",128,0,0,0
+.stabs "trap:67,0,32;run:76=*54,0,32;string:77=*57,0,32;\\",128,0,0,0
+.stabs "mask:77,0,32;image:78=*69,0,32;;,256,32;;",128,0,0,0
+.stabs "DevPrim:t73",128,0,0,0
+.stabs "_t_DevInputColor:T79=s16value:80=u16gray:12,0,32;\\",128,0,0,0
+.stabs "rgb:81=s12red:12,0,32;green:12,32,32;\\",128,0,0,0
+.stabs "blue:12,64,32;;,0,96;cmyk:82=s16cyan:12,0,32;\\",128,0,0,0
+.stabs "magenta:12,32,32;yellow:12,64,32;black:12,96,32;;,0,128;\\",128,0,0,0
+.stabs "lightness:12,0,32;lab:83=s12l:12,0,32;\\",128,0,0,0
+.stabs "a:12,32,32;b:12,64,32;;,0,96;\\",128,0,0,0
+.stabs "tint:12,0,32;;,0,128;;",128,0,0,0
+.stabs "DevInputColor:t79",128,0,0,0
+.stabs "DevColor:t84=*85=xs_t_DevColorRec:",128,0,0,0
+.stabs "_t_DevWhitePoint:T86=s12Xn:12,0,32;Yn:12,32,32;\\",128,0,0,0
+.stabs "Zn:12,64,32;;",128,0,0,0
+.stabs "DevWhitePoint:t86",128,0,0,0
+.stabs "_t_DevScreen:T87=s12priv:21,0,32;width:6,32,16;\\",128,0,0,0
+.stabs "height:6,48,16;thresholds:21,64,32;;",128,0,0,0
+.stabs "DevScreen:t87",128,0,0,0
+.stabs "_t_DevHalftone:T88=s20priv:21,0,32;red:89=*87,32,32;\\",128,0,0,0
+.stabs "green:89,64,32;blue:89,96,32;white:89,128,32;;",128,0,0,0
+.stabs "DevHalftone:t88",128,0,0,0
+.stabs "_t_DevMarkInfo:T90=s32offset:50,0,64;halftone:91=*88,64,32;\\",128,0,0,0
+.stabs "screenphase:50,96,64;color:84,160,32;priv:21,192,32;\\",128,0,0,0
+.stabs "overprint:4,224,32;;",128,0,0,0
+.stabs "DevMarkInfo:t90",128,0,0,0
+.stabs "_t_MakeMaskDevArgs:T92=s24width:6,0,16;height:6,16,16;\\",128,0,0,0
+.stabs "cacheThreshold:3,32,32;compThreshold:3,64,32;\\",128,0,0,0
+.stabs "mtx:43,96,32;mask:93=*56,128,32;offset:94=*51,160,32;;",128,0,0,0
+.stabs "MakeMaskDevArgs:t92",128,0,0,0
+.stabs "PMakeMaskDevArgs:t95=*92",128,0,0,0
+.stabs "_t_DeviceInfoArgs:T96=s16dictSize:3,0,32;AddIntEntry:31,32,32;\\",128,0,0,0
+.stabs "AddRealEntry:31,64,32;AddStringEntry:31,96,32;;",128,0,0,0
+.stabs "DeviceInfoArgs:t96",128,0,0,0
+.stabs "_t_CharMetrics:T97=s16incr:51,0,64;offset:51,64,64;;",128,0,0,0
+.stabs "CharMetrics:t97",128,0,0,0
+.stabs "_t_PreBuiltArgs:T98=s40name:16,0,32;nameLength:3,32,32;\\",128,0,0,0
+.stabs "font:3,64,32;cacheThreshold:3,96,32;compThreshold:3,128,32;\\",128,0,0,0
+.stabs "matrix:43,160,32;bitmapWidths:1,192,8;exactSize:11,200,8;\\",128,0,0,0
+.stabs "inBetweenSize:11,208,8;transformedChar:11,216,8;\\",128,0,0,0
+.stabs "mask:56,224,32;horizMetrics:99=*97,256,32;vertMetrics:99,288,32;;",128,0,0,0
+.stabs "PreBuiltArgs:t98",128,0,0,0
+.stabs "_t_DevFlushMaskArgs:T100=s24name:16,0,32;nameLength:3,32,32;\\",128,0,0,0
+.stabs "font:3,64,32;matrix:43,96,32;horizMetrics:99,128,32;\\",128,0,0,0
+.stabs "vertMetrics:99,160,32;;",128,0,0,0
+.stabs "DevFlushMaskArgs:t100",128,0,0,0
+.stabs "CharNameProc:t101=*102=f16",128,0,0,0
+.stabs "BBoxCompareResult:t103=einside:0,outside:1,overlap:2,;",128,0,0,0
+.stabs "_t_DevProcs:T104=s100Mark:31,0,32;DefaultMtx:31,32,32;\\",128,0,0,0
+.stabs "DefaultBounds:31,64,32;DefaultHalftone:105=*106=f91,96,32;\\",128,0,0,0
+.stabs "ConvertColor:107=*108=f84,128,32;FreeColor:31,160,32;\\",128,0,0,0
+.stabs "SeparationColor:19,192,32;ConvertGamutTransfer:109=*110=f58,224,32;\\",128,0,0,0
+.stabs "FreeGamutTransfer:31,256,32;ConvertRendering:111=*112=f60,288,32;\\",128,0,0,0
+.stabs "FreeRendering:31,320,32;WinToDevTranslation:31,352,32;\\",128,0,0,0
+.stabs "GoAway:31,384,32;Sleep:31,416,32;Wakeup:31,448,32;\\",128,0,0,0
+.stabs "MakeMaskDevice:113=*114=f44,480,32;PreBuiltChar:115=*116=f4,512,32;\\",128,0,0,0
+.stabs "MakeNullDevice:113,544,32;DeviceInfo:31,576,32;InitPage:31,608,32;\\",128,0,0,0
+.stabs "ShowPage:115,640,32;ReadRaster:19,672,32;Proc1:19,704,32;\\",128,0,0,0
+.stabs "Proc2:19,736,32;Proc3:19,768,32;;",128,0,0,0
+.stabs "DevProcs:t104",128,0,0,0
+.stabs "PDevProcs:t117=*104",128,0,0,0
+.stabs "PDevProperties:t118=*119=xs_t_DevProperties:",128,0,0,0
+.stabs "_t_Device:T45=s16procs:117,0,32;priv:21,32,32;\\",128,0,0,0
+.stabs "devProps:118,64,32;ref:6,96,16;maskID:8,112,16;;",128,0,0,0
+.stabs "Device:t45",128,0,0,0
+.stabs "PSCANTYPE:t23",128,0,0,0
+.stabs "_t_PatternData:T120=s24start:23,0,32;end:23,32,32;\\",128,0,0,0
+.stabs "width:3,64,32;constant:4,96,32;value:5,128,32;\\",128,0,0,0
+.stabs "id:3,160,32;;",128,0,0,0
+.stabs "PatternData:t120",128,0,0,0
+.stabs "_t_DevColorVal:T121=s4red:11,0,8;green:11,8,8;\\",128,0,0,0
+.stabs "blue:11,16,8;white:11,24,8;;",128,0,0,0
+.stabs "DevColorVal:t121",128,0,0,0
+.stabs "_t_PatternProcsRec:T122=s12setupPattern:31,0,32;destroyPattern:31,32,32;\\",128,0,0,0
+.stabs "patternInfo:19,64,32;;",128,0,0,0
+.stabs "PatternProcsRec:t122",128,0,0,0
+.stabs "PatternHandle:t123=*122",128,0,0,0
+.stabs "_t_DevColorData:T124=s12first:3,0,32;n:3,32,32;\\",128,0,0,0
+.stabs "delta:3,64,32;;",128,0,0,0
+.stabs "DevColorData:t124",128,0,0,0
+.stabs "_t_ImageProcsRec:T125=s16GetWriteScanline:126=*127=f23,0,32;\\",128,0,0,0
+.stabs "GetReadWriteScanline:126,32,32;Begin:31,64,32;\\",128,0,0,0
+.stabs "End:31,96,32;;",128,0,0,0
+.stabs "ImageProcsRec:t125",128,0,0,0
+.stabs "PImageProcs:t128=*125",128,0,0,0
+.stabs "_t_ImageArgs:T129=s80image:78,0,32;procs:128,32,32;\\",128,0,0,0
+.stabs "data:16,64,32;red:124,96,96;green:124,192,96;\\",128,0,0,0
+.stabs "blue:124,288,96;gray:124,384,96;firstColor:3,480,32;\\",128,0,0,0
+.stabs "bitsPerPixel:3,512,32;pattern:123,544,32;markInfo:130=*90,576,32;\\",128,0,0,0
+.stabs "device:44,608,32;;",128,0,0,0
+.stabs "ImageArgs:t129",128,0,0,0
+.stabs "jmp_buf:t131=ar1;0;21;1",128,0,0,0
+.stabs "_t_Exc_buf:T132=s100Prev:133=*132,0,32;Environ:131,32,704;\\",128,0,0,0
+.stabs "Message:16,736,32;Code:1,768,32;;",128,0,0,0
+.stabs "_Exc_Buf:t132",128,0,0,0
+.stabs "twoBitSample:S134=ar1;0;3;3",38,0,0,_twoBitSample
+.data
+	.align 4
+_twoBitSample:
+	.long 0
+	.long 85
+	.long 170
+	.long 255
+.stabs "ImSourceType:t135=es11:0,s21:1,s41:2,s81:3,s12I:4,\\",128,0,0,0
+.stabs "s22I:5,s42I:6,s82I:7,s13I:8,s23I:9,s43I:10,\\",128,0,0,0
+.stabs "s83I:11,s14I:12,s24I:13,s44I:14,s84I:15,s15I:16,\\",128,0,0,0
+.stabs "s25I:17,s45I:18,s85I:19,s12N:20,s22N:21,s42N:22,\\",128,0,0,0
+.stabs "s82N:23,s13N:24,s23N:25,s43N:26,s83N:27,s14N:28,\\",128,0,0,0
+.stabs "s24N:29,s44N:30,s84N:31,s15N:32,s25N:33,s45N:34,\\",128,0,0,0
+.stabs "s85N:35,sBad:36,;",128,0,0,0
+	.align 4
+.LC0:
+	.float 5.000000000000e-01
+	.align 8
+.LC1:
+	.double 5.00000000000000000000e-01
+.LC2:
+	.ascii "bogus get scanline function\12\0"
+.LC3:
+	.ascii "FmGetWriteScanline didn't finish! fm_called_flag: %d\12\0"
+.LC4:
+	.ascii "bogus destbase returned from GetWriteScanline: %X, scanline: %D, framebase: %X, framebytewidth: %D, fm_scan_ret__: %X\12\0"
+	.align 8
+.LC5:
+	.double 4.50360177485414400000e+15
+.text
+	.align 4
+.globl _Im110
+_Im110:
+	.stabd 68,0,53
+	adds -528,sp,sp
+	st.l fp,520(sp)
+	st.l r1,524(sp)
+	adds 520,sp,fp
+	st.l r4,0(sp)
+	st.l r5,4(sp)
+	st.l r6,8(sp)
+	st.l r7,12(sp)
+	st.l r8,16(sp)
+	st.l r9,20(sp)
+	st.l r10,24(sp)
+	st.l r11,28(sp)
+	st.l r12,32(sp)
+	st.l r13,36(sp)
+	st.l r14,40(sp)
+	st.l r15,44(sp)
+	fst.d f2,48(sp)
+	fst.d f4,56(sp)
+	fst.d f6,64(sp)
+	st.l r16,-60(fp)
+	st.l r17,-68(fp)
+	st.l r18,-76(fp)
+	st.l r19,-84(fp)
+.LBB2:
+	.stabd 68,0,58
+	ld.l 72(r19),r4
+	.stabd 68,0,59
+	mov r19,r28
+	ld.l 0(r28),r28
+	st.l r28,-92(fp)
+	.stabd 68,0,60
+	ld.l 36(r28),r28
+	st.l r28,-100(fp)
+	.stabd 68,0,74
+	or 0,r0,r17
+	ld.l 64(r19),r16
+	btne 16,r16,.L2
+	or 1,r0,r17
+.L2:
+	st.l r17,-268(fp)
+	.stabd 68,0,77
+	or 36,r0,r15
+	.stabd 68,0,78
+	ld.l -92(fp),r28
+	ld.s 30(r28),r28
+	st.l r28,-300(fp)
+	or 0,r0,r17
+	ld.l -100(fp),r28
+	ld.s 10(r28),r16
+	btne 4,r16,.L3
+	or 1,r0,r17
+.L3:
+	st.l r17,-308(fp)
+	.stabd 68,0,79
+	ld.l -92(fp),r28
+	ld.l 32(r28),r16
+	bte r16,r0,.L4
+	or 1,r0,r16
+.L4:
+	st.l r16,-316(fp)
+	.stabd 68,0,80
+	ld.l -100(fp),r28
+	ld.s 10(r28),r16
+	ld.l -300(fp),r28
+	bte r28,r0,.L5
+	addu 1,r16,r16
+.L5:
+	st.l r16,-324(fp)
+	.stabd 68,0,82
+	ld.l -100(fp),r28
+	ld.s 14(r28),r28
+	st.l r28,-132(fp)
+	.stabd 68,0,86
+	ld.l -84(fp),r28
+	ld.l 64(r28),r16
+	xor 32,r16,r0
+	bc .L8
+	ld.l -268(fp),r28
+	bte r28,r0,.L7
+.L8:
+	ld.l -84(fp),r28
+	ld.l 28(r28),r16
+	subs 15,r16,r0
+	bnc .L7
+	ld.l 40(r28),r16
+	subs 15,r16,r0
+	bnc .L7
+	ld.l 16(r28),r16
+	subs 15,r16,r0
+	bc .L6
+.L7:
+	.stabd 68,0,87
+	or 515,r0,r16
+	call _os_raise
+	or 0,r0,r17
+.L6:
+	.stabd 68,0,93
+	ld.l -316(fp),r28
+	btne r28,r0,.L9
+	.stabd 68,0,94
+	st.l r0,-292(fp)
+	st.l r0,-284(fp)
+	br .L10
+	st.l r0,-276(fp)
+.L9:
+	.stabd 68,0,96
+	ld.l -92(fp),r28
+	ld.l 32(r28),r16
+	ld.l 8(r16),r28
+	st.l r28,-276(fp)
+	.stabd 68,0,97
+	ld.l 12(r16),r28
+	st.l r28,-284(fp)
+	.stabd 68,0,98
+	ld.l 16(r16),r28
+	st.l r28,-292(fp)
+.L10:
+	.stabd 68,0,102
+	ld.l -92(fp),r28
+	ld.s 4(r28),r16
+	.stabd 68,0,103
+	ld.s 8(r28),r17
+	.stabd 68,0,105
+	shl 16,r16,r28
+	st.l r28,-212(fp)
+	.stabd 68,0,106
+	shl 16,r17,r28
+	st.l r28,-220(fp)
+	.stabd 68,0,107
+	ld.l -92(fp),r28
+	ld.s 6(r28),r28
+	st.l r28,-228(fp)
+	ld.l -228(fp),r30
+	shl 16,r30,r28
+	st.l r28,-228(fp)
+	.stabd 68,0,108
+	ld.l -92(fp),r28
+	ld.s 10(r28),r28
+	st.l r28,-236(fp)
+	ld.l -236(fp),r30
+	shl 16,r30,r28
+	st.l r28,-236(fp)
+	.stabd 68,0,110
+	ld.l -92(fp),r28
+	call _pflttofix
+	ld.l 0(r28),r16
+	st.l r16,-48(fp)
+	.stabd 68,0,111
+	ld.l -92(fp),r28
+	ld.l 0(r28),r16
+	call _pflttofix
+	addu 4,r16,r16
+	st.l r16,-44(fp)
+	.stabd 68,0,113
+	ld.l -92(fp),r28
+	ld.l 0(r28),r16
+	call _pflttofix
+	addu 8,r16,r16
+	st.l r16,-56(fp)
+	.stabd 68,0,114
+	ld.l -92(fp),r28
+	ld.l 0(r28),r16
+	call _pflttofix
+	addu 12,r16,r16
+	st.l r16,-52(fp)
+	.stabd 68,0,116
+	ld.l 0(r4),r28
+	st.l r28,-140(fp)
+	.stabd 68,0,117
+	ld.l 4(r4),r28
+	st.l r28,-148(fp)
+	.stabd 68,0,118
+	ld.l -100(fp),r28
+	ld.b 18(r28),r16
+	and 0xff,r16,r16
+	bte 2,r16,.L31
+	subs 2,r16,r0
+	bc .L90
+	bte 1,r16,.L12
+	br .L11
+	nop
+.L90:
+	bte 4,r16,.L50
+	bte 8,r16,.L69
+	br .L11
+	nop
+.L12:
+	.stabd 68,0,120
+	ld.l -100(fp),r28
+	ld.b 19(r28),r16
+	and 0xff,r16,r16
+	bte r16,r0,.L13
+	.stabd 68,0,121
+	ld.l -324(fp),r28
+	addu -1,r28,r16
+	subu 4,r16,r0
+	bnc .L11
+	shl 2,r16,r16
+	or l%.L20,r0,r31
+	orh h%.L20,r31,r31
+	ld.l r31(r16),r16
+	bri r16
+	nop
+	.data
+	.align 4
+.L20:
+	.long .L24
+	.long .L16
+	.long .L17
+	.long .L18
+	.long .L19
+	.text
+	.stabd 68,0,122
+.L16:
+	.stabd 68,0,123
+	br .L11
+	or 4,r0,r15
+.L17:
+	.stabd 68,0,124
+	br .L11
+	or 8,r0,r15
+.L18:
+	.stabd 68,0,125
+	br .L11
+	or 12,r0,r15
+.L19:
+	.stabd 68,0,126
+	br .L11
+	or 16,r0,r15
+.L13:
+	.stabd 68,0,130
+	ld.l -324(fp),r28
+	addu -1,r28,r16
+	subu 4,r16,r0
+	bnc .L11
+	shl 2,r16,r16
+	or l%.L29,r0,r31
+	orh h%.L29,r31,r31
+	ld.l r31(r16),r16
+	bri r16
+	nop
+	.data
+	.align 4
+.L29:
+	.long .L24
+	.long .L25
+	.long .L26
+	.long .L27
+	.long .L28
+	.text
+.L24:
+	.stabd 68,0,131
+	br .L11
+	or 0,r0,r15
+.L25:
+	.stabd 68,0,132
+	br .L11
+	or 20,r0,r15
+.L26:
+	.stabd 68,0,133
+	br .L11
+	or 24,r0,r15
+.L27:
+	.stabd 68,0,134
+	br .L11
+	or 28,r0,r15
+.L28:
+	.stabd 68,0,135
+	.stabd 68,0,138
+	br .L11
+	or 32,r0,r15
+.L31:
+	.stabd 68,0,140
+	ld.l -100(fp),r28
+	ld.b 19(r28),r16
+	and 0xff,r16,r16
+	bte r16,r0,.L32
+	.stabd 68,0,141
+	ld.l -324(fp),r28
+	addu -1,r28,r16
+	subu 4,r16,r0
+	bnc .L11
+	shl 2,r16,r16
+	or l%.L39,r0,r31
+	orh h%.L39,r31,r31
+	ld.l r31(r16),r16
+	bri r16
+	nop
+	.data
+	.align 4
+.L39:
+	.long .L43
+	.long .L35
+	.long .L36
+	.long .L37
+	.long .L38
+	.text
+	.stabd 68,0,142
+.L35:
+	.stabd 68,0,143
+	br .L11
+	or 5,r0,r15
+.L36:
+	.stabd 68,0,144
+	br .L11
+	or 9,r0,r15
+.L37:
+	.stabd 68,0,145
+	br .L11
+	or 13,r0,r15
+.L38:
+	.stabd 68,0,146
+	br .L11
+	or 17,r0,r15
+.L32:
+	.stabd 68,0,150
+	ld.l -324(fp),r28
+	addu -1,r28,r16
+	subu 4,r16,r0
+	bnc .L11
+	shl 2,r16,r16
+	or l%.L48,r0,r31
+	orh h%.L48,r31,r31
+	ld.l r31(r16),r16
+	bri r16
+	nop
+	.data
+	.align 4
+.L48:
+	.long .L43
+	.long .L44
+	.long .L45
+	.long .L46
+	.long .L47
+	.text
+.L43:
+	.stabd 68,0,151
+	br .L11
+	or 1,r0,r15
+.L44:
+	.stabd 68,0,152
+	br .L11
+	or 21,r0,r15
+.L45:
+	.stabd 68,0,153
+	br .L11
+	or 25,r0,r15
+.L46:
+	.stabd 68,0,154
+	br .L11
+	or 29,r0,r15
+.L47:
+	.stabd 68,0,155
+	.stabd 68,0,158
+	br .L11
+	or 33,r0,r15
+.L50:
+	.stabd 68,0,160
+	ld.l -100(fp),r28
+	ld.b 19(r28),r16
+	and 0xff,r16,r16
+	bte r16,r0,.L51
+	.stabd 68,0,161
+	ld.l -324(fp),r28
+	addu -1,r28,r16
+	subu 4,r16,r0
+	bnc .L11
+	shl 2,r16,r16
+	or l%.L58,r0,r31
+	orh h%.L58,r31,r31
+	ld.l r31(r16),r16
+	bri r16
+	nop
+	.data
+	.align 4
+.L58:
+	.long .L62
+	.long .L54
+	.long .L55
+	.long .L56
+	.long .L57
+	.text
+	.stabd 68,0,162
+.L54:
+	.stabd 68,0,163
+	br .L11
+	or 6,r0,r15
+.L55:
+	.stabd 68,0,164
+	br .L11
+	or 10,r0,r15
+.L56:
+	.stabd 68,0,165
+	br .L11
+	or 14,r0,r15
+.L57:
+	.stabd 68,0,166
+	br .L11
+	or 18,r0,r15
+.L51:
+	.stabd 68,0,170
+	ld.l -324(fp),r28
+	addu -1,r28,r16
+	subu 4,r16,r0
+	bnc .L11
+	shl 2,r16,r16
+	or l%.L67,r0,r31
+	orh h%.L67,r31,r31
+	ld.l r31(r16),r16
+	bri r16
+	nop
+	.data
+	.align 4
+.L67:
+	.long .L62
+	.long .L63
+	.long .L64
+	.long .L65
+	.long .L66
+	.text
+.L62:
+	.stabd 68,0,171
+	br .L11
+	or 2,r0,r15
+.L63:
+	.stabd 68,0,172
+	br .L11
+	or 22,r0,r15
+.L64:
+	.stabd 68,0,173
+	br .L11
+	or 26,r0,r15
+.L65:
+	.stabd 68,0,174
+	br .L11
+	or 30,r0,r15
+.L66:
+	.stabd 68,0,175
+	.stabd 68,0,178
+	br .L11
+	or 34,r0,r15
+.L69:
+	.stabd 68,0,180
+	ld.l -100(fp),r28
+	ld.b 19(r28),r16
+	and 0xff,r16,r16
+	bte r16,r0,.L70
+	.stabd 68,0,181
+	ld.l -324(fp),r28
+	addu -1,r28,r16
+	subu 4,r16,r0
+	bnc .L11
+	shl 2,r16,r16
+	or l%.L77,r0,r31
+	orh h%.L77,r31,r31
+	ld.l r31(r16),r16
+	bri r16
+	nop
+	.data
+	.align 4
+.L77:
+	.long .L81
+	.long .L73
+	.long .L74
+	.long .L75
+	.long .L76
+	.text
+	.stabd 68,0,182
+.L73:
+	.stabd 68,0,183
+	br .L11
+	or 7,r0,r15
+.L74:
+	.stabd 68,0,184
+	br .L11
+	or 11,r0,r15
+.L75:
+	.stabd 68,0,185
+	br .L11
+	or 15,r0,r15
+.L76:
+	.stabd 68,0,186
+	br .L11
+	or 19,r0,r15
+.L70:
+	.stabd 68,0,190
+	ld.l -324(fp),r28
+	addu -1,r28,r16
+	subu 4,r16,r0
+	bnc .L11
+	shl 2,r16,r16
+	or l%.L86,r0,r31
+	orh h%.L86,r31,r31
+	ld.l r31(r16),r16
+	bri r16
+	nop
+	.data
+	.align 4
+.L86:
+	.long .L81
+	.long .L82
+	.long .L83
+	.long .L84
+	.long .L85
+	.text
+.L81:
+	.stabd 68,0,191
+	br .L11
+	or 3,r0,r15
+.L82:
+	.stabd 68,0,192
+	br .L11
+	or 23,r0,r15
+.L83:
+	.stabd 68,0,193
+	br .L11
+	or 27,r0,r15
+.L84:
+	.stabd 68,0,194
+	br .L11
+	or 31,r0,r15
+.L85:
+	.stabd 68,0,195
+	or 35,r0,r15
+	.stabd 68,0,198
+.L11:
+	.stabd 68,0,200
+	xor 36,r15,r0
+	bnc .L91
+	.stabd 68,0,201
+	call _CantHappen
+	nop
+.L91:
+	.stabd 68,0,203
+	ld.l -84(fp),r28
+	ld.l 4(r28),r17
+	ld.l 8(r28),r16
+	ld.l 8(r17),r17
+	calli r17
+	nop
+	.stabd 68,0,204
+	orh h%_twoBitSample,r0,r12
+	br .L92
+	or l%_twoBitSample,r12,r12
+.L318:
+	.stabd 68,0,205
+	ld.l -76(fp),r28
+	bte r28,r0,.L94
+	.stabd 68,0,206
+	ld.s 4(r28),r28
+	st.l r28,-108(fp)
+	.stabd 68,0,207
+	ld.l -76(fp),r28
+	ld.s 6(r28),r16
+	addu -1,r16,r28
+	st.l r28,-116(fp)
+	.stabd 68,0,208
+	ld.l -76(fp),r28
+	ld.l 12(r28),r28
+	br .L95
+	st.l r28,-188(fp)
+.L94:
+	.stabd 68,0,210
+	ld.l -68(fp),r28
+	bte r28,r0,.L96
+	.stabd 68,0,211
+	addu -32,fp,r16
+	mov r28,r17
+	or 28,r0,r18 /*sz_blk_mv*/
+	adds -4,r0,r19
+	adds r16,r18,r20
+	adds r19,r18,r18
+	bla r19,r18,.Lm0
+	subu r17,r19,r17
+.Lm0:
+	ld.l r17(r18),r31
+	st.l r31,-4(r20)
+	bla r19,r18,.Lm0
+	adds r19,r20,r20
+	.stabd 68,0,212
+	ld.s -32(fp),r28
+	st.l r28,-108(fp)
+	.stabd 68,0,213
+	ld.s -30(fp),r16
+	addu -1,r16,r28
+	st.l r28,-116(fp)
+	.stabd 68,0,214
+	or 0,r0,r18
+	ld.s -28(fp),r16
+	ld.s -26(fp),r17
+	bte r16,r17,.L97
+	or 1,r0,r18
+.L97:
+	st.l r18,-244(fp)
+	.stabd 68,0,215
+	or 0,r0,r18
+	ld.s -16(fp),r16
+	ld.s -14(fp),r17
+	bte r16,r17,.L98
+	or 1,r0,r18
+.L98:
+	st.l r18,-252(fp)
+	.stabd 68,0,216
+	ld.s -28(fp),r16
+	ld.l -140(fp),r28
+	addu r28,r16,r28
+	st.l r28,-156(fp)
+	.stabd 68,0,217
+	ld.s -16(fp),r16
+	ld.l -140(fp),r28
+	addu r28,r16,r28
+	st.l r28,-164(fp)
+	.stabd 68,0,218
+	ld.l -244(fp),r28
+	bte r28,r0,.L99
+	ld.l -140(fp),r28
+	shl 16,r28,r16
+	ld.l -24(fp),r17
+	addu r17,r16,r16
+	st.l r16,-24(fp)
+.L99:
+	.stabd 68,0,219
+	ld.l -252(fp),r28
+	bte r28,r0,.L95
+	ld.l -140(fp),r28
+	shl 16,r28,r16
+	ld.l -12(fp),r17
+	addu r17,r16,r16
+	br .L95
+	st.l r16,-12(fp)
+.L96:
+	.stabd 68,0,221
+	call _CantHappen
+	nop
+.L95:
+	.stabd 68,0,222
+	ld.l -108(fp),r28
+	ld.l -148(fp),r30
+	addu r30,r28,r30
+	st.l r30,-108(fp)
+	ld.l -116(fp),r28
+	ld.l -148(fp),r30
+	addu r30,r28,r30
+	st.l r30,-116(fp)
+	.stabd 68,0,225
+	ld.l -140(fp),r28
+	st.l r28,-172(fp)
+	ld.l -108(fp),r28
+	st.l r28,-180(fp)
+	.stabd 68,0,226
+	orh ha%.LC0,r0,r31
+	ld.l l%.LC0(r31),r28
+	st.l r28,-40(fp)
+	ld.l -108(fp),r28
+	ld.l -148(fp),r30
+	subu r28,r30,r16
+	orh ha%.LC5,r0,r31
+	fld.d l%.LC5(r31),f8
+	xorh 32768,r16,r16
+	st.l r16,-332(fp)
+	fst.l f9,-336(fp)
+	fld.d -336(fp),f12
+	fsub.dd f12,f8,f8
+	orh ha%.LC1,r0,r31
+	fld.d l%.LC1(r31),f10
+	fadd.dd f8,f10,f8
+	fmov.ds f8,f8
+	fst.l f8,-36(fp)
+	.stabd 68,0,227
+	addu -40,fp,r4
+	addu -16,sp,sp
+	mov sp,r16
+	mov r4,r17
+	ld.l 4(r17),r31
+	st.l r31,4(r16)
+	ld.l 0(r17),r31
+	st.l r31,0(r16)
+	ld.l -92(fp),r28
+	ld.l 0(r28),r16
+	mov r4,r17
+	call _TfmPCd
+	mov sp,r28
+	.stabd 68,0,228
+	call _pflttofix
+	mov r4,r16
+	mov r16,r14
+	call _pflttofix
+	addu 4,r4,r16
+	mov r16,r13
+	.stabd 68,0,229
+	addu 16,sp,sp
+.L102:
+	.stabd 68,0,230
+	ld.l -76(fp),r28
+	bte r28,r0,.L104
+	ld.l -188(fp),r28
+	ld.s 0(r28),r16
+	ld.l -188(fp),r30
+	addu 2,r30,r28
+	br .L105
+	st.l r28,-188(fp)
+.L104:
+	or 1,r0,r16
+.L105:
+	.stabd 68,0,231
+	br .L106
+	st.l r16,-124(fp)
+.L310:
+.LBB3:
+	.stabd 68,0,233
+	ld.l -76(fp),r28
+	bte r28,r0,.L108
+	.stabd 68,0,234
+	ld.l -188(fp),r28
+	ld.s 0(r28),r16
+	ld.l -140(fp),r28
+	addu r28,r16,r4
+	ld.l -188(fp),r30
+	addu 2,r30,r28
+	st.l r28,-188(fp)
+	ld.s 0(r28),r16
+	ld.l -140(fp),r28
+	addu r28,r16,r9
+	ld.l -188(fp),r30
+	addu 2,r30,r28
+	br .L109
+	st.l r28,-188(fp)
+.L108:
+	.stabd 68,0,235
+	ld.l -156(fp),r4
+	ld.l -164(fp),r9
+.L109:
+	.stabd 68,0,236
+	ld.l -172(fp),r28
+	bte r4,r28,.L110
+.LBB4:
+	.stabd 68,0,237
+	subu r4,r28,r18
+	.stabd 68,0,238
+	adds -1,r0,r16
+	bte r18,r16,.L113
+	btne 1,r18,.L114
+	.stabd 68,0,239
+	ld.l -48(fp),r16
+	addu r16,r14,r14
+	br .L321
+	ld.l -44(fp),r16
+.L113:
+	.stabd 68,0,240
+	ld.l -48(fp),r16
+	subu r14,r16,r14
+	ld.l -44(fp),r16
+	br .L111
+	subu r13,r16,r13
+.L114:
+	.stabd 68,0,241
+	ixfr r18,f6
+	ld.l -48(fp),r28
+	st.l r28,-340(fp)
+	fld.d -344(fp),f12
+	fmlow.dd f12,f6,f12
+	fxfr f12,r16
+	fxfr f13,r17
+	addu r16,r14,r14
+	st.l r18,-348(fp)
+	ld.l -44(fp),r28
+	st.l r28,-356(fp)
+	fld.d -352(fp),f12
+	fld.d -360(fp),f14
+	fmlow.dd f14,f12,f12
+	fxfr f12,r16
+	fxfr f13,r17
+.L321:
+	addu r16,r13,r13
+.L111:
+	.stabd 68,0,243
+	st.l r4,-172(fp)
+.LBE4:
+.L110:
+	.stabd 68,0,245
+	ld.l -108(fp),r28
+	ld.l -180(fp),r30
+	bte r28,r30,.L116
+.LBB5:
+	.stabd 68,0,246
+	subu r28,r30,r18
+	.stabd 68,0,247
+	btne 1,r18,.L119
+	.stabd 68,0,248
+	ld.l -56(fp),r16
+	addu r16,r14,r14
+	br .L322
+	ld.l -52(fp),r16
+.L119:
+	.stabd 68,0,249
+	st.l r18,-364(fp)
+	ld.l -56(fp),r28
+	st.l r28,-372(fp)
+	fld.d -368(fp),f12
+	fld.d -376(fp),f14
+	fmlow.dd f14,f12,f12
+	fxfr f12,r16
+	fxfr f13,r17
+	addu r16,r14,r14
+	st.l r18,-380(fp)
+	ld.l -52(fp),r28
+	st.l r28,-388(fp)
+	fld.d -384(fp),f12
+	fld.d -392(fp),f14
+	fmlow.dd f14,f12,f12
+	fxfr f12,r16
+	fxfr f13,r17
+.L322:
+	addu r16,r13,r13
+	.stabd 68,0,251
+	ld.l -108(fp),r28
+	st.l r28,-180(fp)
+.LBE5:
+.L116:
+.LBB6:
+	.stabd 68,0,255
+	mov r14,r18
+	mov r13,r16
+	.stabd 68,0,257
+	bte r4,r9,.L122
+	ld.l -48(fp),r19
+	ld.l -44(fp),r17
+.L124:
+	ld.l -212(fp),r28
+	subs r18,r28,r0
+	bc .L123
+	ld.l -228(fp),r28
+	subs r18,r28,r0
+	bnc .L123
+	ld.l -220(fp),r28
+	subs r16,r28,r0
+	bc .L123
+	ld.l -236(fp),r28
+	subs r16,r28,r0
+	bc .L122
+.L123:
+	.stabd 68,0,259
+	addu r19,r18,r18
+	addu r17,r16,r16
+	addu 1,r4,r4
+	.stabd 68,0,258
+	btne r4,r9,.L124
+.L122:
+	.stabd 68,0,261
+	st.l r18,-196(fp)
+	st.l r16,-204(fp)
+	.stabd 68,0,263
+	subu r9,r4,r16
+	addu -1,r16,r16
+	st.l r16,-396(fp)
+	ld.l -48(fp),r28
+	st.l r28,-404(fp)
+	fld.d -400(fp),f12
+	fld.d -408(fp),f14
+	fmlow.dd f14,f12,f12
+	fxfr f12,r18
+	fxfr f13,r19
+	ld.l -196(fp),r28
+	addu r18,r28,r18
+	.stabd 68,0,264
+	st.l r16,-412(fp)
+	ld.l -44(fp),r28
+	st.l r28,-420(fp)
+	fld.d -416(fp),f12
+	fld.d -424(fp),f14
+	fmlow.dd f14,f12,f12
+	fxfr f12,r16
+	fxfr f13,r17
+	ld.l -204(fp),r28
+	addu r16,r28,r16
+	.stabd 68,0,267
+	bte r4,r9,.L126
+	ld.l -48(fp),r19
+	ld.l -44(fp),r17
+.L128:
+	ld.l -212(fp),r28
+	subs r18,r28,r0
+	bc .L127
+	ld.l -228(fp),r28
+	subs r18,r28,r0
+	bnc .L127
+	ld.l -220(fp),r28
+	subs r16,r28,r0
+	bc .L127
+	ld.l -236(fp),r28
+	subs r16,r28,r0
+	bc .L126
+.L127:
+	.stabd 68,0,269
+	subu r18,r19,r18
+	subu r16,r17,r16
+	addu -1,r9,r9
+	.stabd 68,0,268
+	btne r4,r9,.L128
+.L126:
+	.stabd 68,0,271
+.LBE6:
+	.stabd 68,0,274
+	bte r4,r9,.L106
+	.stabd 68,0,276
+	ld.l -268(fp),r28
+	btne r28,r0,.L130
+.LBB7:
+	.stabd 68,0,278
+	ld.l -84(fp),r28
+	ld.l 4(r28),r16
+	ld.l 0(r16),r16
+	or l%_FmGetWriteScanline,r0,r17
+	orh h%_FmGetWriteScanline,r17,r17
+	bte r16,r17,.L131
+	.stabd 68,0,279
+	orh h%.LC2,r0,r16
+	call _printf
+	or l%.LC2,r16,r16
+	.stabd 68,0,280
+	call _abort
+	nop
+.L131:
+	.stabd 68,0,283
+	orh ha%_fm_called_flag,r0,r31
+	st.l r0,l%_fm_called_flag(r31)
+	.stabd 68,0,285
+	ld.l -84(fp),r28
+	ld.l 4(r28),r20
+	ld.l 8(r28),r16
+	ld.l -108(fp),r17
+	mov r4,r18
+	mov r9,r19
+	ld.l 0(r20),r20
+	calli r20
+	nop
+	mov r16,r8
+	.stabd 68,0,286
+	orh ha%_fm_called_flag,r0,r31
+	ld.l l%_fm_called_flag(r31),r17
+	bte 2,r17,.L132
+	.stabd 68,0,288
+	orh h%.LC3,r0,r16
+	call _printf
+	or l%.LC3,r16,r16
+	.stabd 68,0,289
+	call _abort
+	nop
+.L132:
+	.stabd 68,0,291
+	call _current_pmap
+	nop
+	mov r8,r17
+	call _pmap_translation_valid
+	or 0,r0,r18
+	bte r16,r0,.L133
+.LBB8:
+	.stabd 68,0,293
+	or l%.LC4,r0,r16
+	orh h%.LC4,r16,r16
+	mov r8,r17
+	ld.l -108(fp),r18
+	orh ha%_framebase,r0,r31
+	ld.l l%_framebase(r31),r19
+	orh ha%_framebytewidth,r0,r31
+	ld.l l%_framebytewidth(r31),r20
+	orh ha%_fm_scan_ret__,r0,r31
+	call _printf
+	ld.l l%_fm_scan_ret__(r31),r21
+	.stabd 68,0,294
+	call _abort
+	nop
+.LBE8:
+.L133:
+	.stabd 68,0,296
+	shl 2,r4,r16
+.LBE7:
+	br .L134
+	addu r16,r8,r8
+.L130:
+	.stabd 68,0,299
+	ld.l -84(fp),r28
+	ld.l 4(r28),r20
+	ld.l 8(r28),r16
+	ld.l -108(fp),r17
+	mov r4,r18
+	mov r9,r19
+	ld.l 0(r20),r20
+	calli r20
+	nop
+	.stabd 68,0,300
+	shl 1,r4,r17
+	addu r17,r16,r28
+	st.l r28,-260(fp)
+.L134:
+	.stabd 68,0,306
+	subu r9,r4,r29
+.LBE3:
+.LBB9:
+	.stabd 68,0,315
+	ld.l -100(fp),r28
+	ld.l 0(r28),r16
+	ld.l 0(r16),r20
+	.stabd 68,0,316
+	ld.l 4(r16),r21
+	.stabd 68,0,317
+	ld.l 8(r16),r22
+	.stabd 68,0,318
+	ld.l 12(r16),r23
+	.stabd 68,0,319
+	ld.l 16(r16),r26
+	.stabd 68,0,320
+	or 1,r0,r27
+	.stabd 68,0,321
+	ld.l -48(fp),r16
+	subs 0,r16,r0
+	bnc .L135
+	.stabd 68,0,322
+	st.l r16,-428(fp)
+	orh h%65536,r0,r4
+	ld.l -196(fp),r28
+	and 65535,r28,r16
+	br .L136
+	subu r4,r16,r25
+.L135:
+	.stabd 68,0,324
+	ld.l -48(fp),r16
+	subu r0,r16,r28
+	st.l r28,-428(fp)
+	orh h%-65536,r0,r4
+	ld.l -196(fp),r28
+	and 65535,r28,r16
+	addu 1,r16,r25
+.L136:
+	.stabd 68,0,325
+	ld.l -44(fp),r16
+	subs 0,r16,r0
+	bnc .L137
+	.stabd 68,0,326
+	mov r16,r9
+	orh h%65536,r0,r28
+	st.l r28,-436(fp)
+	ld.l -204(fp),r28
+	and 65535,r28,r16
+	ld.l -436(fp),r28
+	br .L139
+	subu r28,r16,r24
+.L137:
+	.stabd 68,0,328
+	ld.l -44(fp),r16
+	subu r0,r16,r9
+	orh h%-65536,r0,r28
+	st.l r28,-436(fp)
+	ld.l -204(fp),r28
+	and 65535,r28,r16
+	.stabd 68,0,329
+	br .L139
+	addu 1,r16,r24
+.L309:
+	.stabd 68,0,330
+	bte r27,r0,.L141
+.LBB10:
+	.stabd 68,0,333
+	or 0,r0,r27
+	.stabd 68,0,334
+	ld.l -196(fp),r28
+	shra 16,r28,r16
+	ld.l -92(fp),r28
+	ld.l 12(r28),r17
+	subu r16,r17,r18
+	.stabd 68,0,335
+	ld.l -204(fp),r28
+	shra 16,r28,r16
+	ld.l -92(fp),r28
+	ld.l 16(r28),r17
+	.stabd 68,0,336
+	subu r16,r17,r28
+	ixfr r28,f2
+	fld.l -132(fp),f4
+	fmlow.dd f4,f2,f8
+	fxfr f8,r17
+	.stabd 68,0,337
+	subu 35,r15,r0
+	bnc .L142
+	shl 2,r15,r16
+	or l%.L274,r0,r31
+	orh h%.L274,r31,r31
+	ld.l r31(r16),r16
+	bri r16
+	nop
+	.data
+	.align 4
+.L274:
+	.long .L143
+	.long .L146
+	.long .L147
+	.long .L149
+	.long .L150
+	.long .L156
+	.long .L158
+	.long .L159
+	.long .L160
+	.long .L169
+	.long .L172
+	.long .L175
+	.long .L176
+	.long .L195
+	.long .L196
+	.long .L197
+	.long .L198
+	.long .L213
+	.long .L218
+	.long .L221
+	.long .L222
+	.long .L227
+	.long .L228
+	.long .L231
+	.long .L232
+	.long .L239
+	.long .L240
+	.long .L243
+	.long .L244
+	.long .L253
+	.long .L254
+	.long .L257
+	.long .L258
+	.long .L269
+	.long .L270
+	.long .L273
+	.text
+.L143:
+	.stabd 68,0,339
+	addu r17,r20,r16
+	shra 3,r18,r17
+	.stabd 68,0,340
+	ld.b r17(r16),r16
+	and 0xff,r16,r16
+	and 7,r18,r17
+	or 128,r0,r28
+	shra r17,r28,r17
+	and r17,r16,r0
+	bc .L144
+	br .L145
+	or 255,r0,r16
+.L144:
+	or 0,r0,r16
+.L145:
+	.stabd 68,0,341
+	br .L142
+	mov r16,r5
+.L146:
+	.stabd 68,0,344
+	shl 1,r18,r18
+	.stabd 68,0,345
+	addu r17,r20,r16
+	shra 3,r18,r17
+	.stabd 68,0,346
+	ld.b r17(r16),r16
+	and 0xff,r16,r16
+	and 7,r18,r17
+	subu 6,r17,r17
+	shra r17,r16,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	.stabd 68,0,347
+	br .L142
+	ld.l r16(r12),r5
+.L147:
+	.stabd 68,0,350
+	shl 2,r18,r18
+	.stabd 68,0,351
+	addu r17,r20,r16
+	shra 3,r18,r17
+	.stabd 68,0,352
+	ld.b r17(r16),r16
+	and 0xff,r16,r5
+	.stabd 68,0,353
+	and 7,r18,r0
+	bnc .L148
+	.stabd 68,0,354
+	shra 4,r5,r5
+.L148:
+	.stabd 68,0,355
+	shl 4,r5,r16
+	.stabd 68,0,356
+	br .L142
+	or r16,r5,r5
+.L149:
+	.stabd 68,0,359
+	addu r17,r20,r16
+	.stabd 68,0,360
+	ld.b r18(r16),r16
+	.stabd 68,0,361
+	br .L142
+	and 0xff,r16,r5
+.L150:
+	.stabd 68,0,364
+	shl 1,r18,r18
+	.stabd 68,0,365
+	addu r17,r20,r16
+	shra 3,r18,r17
+	addu r17,r16,r17
+	.stabd 68,0,366
+	and 7,r18,r16
+	or 128,r0,r28
+	shra r16,r28,r18
+	.stabd 68,0,367
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,368
+	and r18,r19,r0
+	bc .L151
+	br .L152
+	or 255,r0,r16
+.L151:
+	or 0,r0,r16
+.L152:
+	mov r16,r5
+	.stabd 68,0,369
+	shra 1,r18,r18
+	.stabd 68,0,370
+	btne r18,r0,.L153
+	.stabd 68,0,371
+	.stabd 68,0,372
+	ld.b 1(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,373
+	or 128,r0,r18
+.L153:
+	.stabd 68,0,375
+	and r18,r19,r0
+	bnc .L328
+	.stabd 68,0,376
+	br .L225
+	nop
+.L156:
+	.stabd 68,0,379
+	.stabd 68,0,380
+	shl 2,r18,r18
+	.stabd 68,0,381
+	addu r17,r20,r16
+	shra 3,r18,r17
+	addu r17,r16,r17
+	.stabd 68,0,382
+	and 7,r18,r16
+	subu 6,r16,r18
+	.stabd 68,0,383
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,384
+	shra r18,r19,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r5
+	.stabd 68,0,385
+	addu -2,r18,r18
+	.stabd 68,0,386
+	btne r18,r0,.L157
+	.stabd 68,0,387
+	.stabd 68,0,388
+	ld.b 1(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,389
+	or 6,r0,r18
+.L157:
+	.stabd 68,0,391
+	.stabd 68,0,392
+	br .L323
+	shra r18,r19,r16
+.L158:
+	.stabd 68,0,395
+	shl 1,r18,r18
+	.stabd 68,0,396
+	addu r17,r20,r16
+	shra 1,r18,r17
+	.stabd 68,0,397
+	ld.b r17(r16),r16
+	and 0xff,r16,r19
+	.stabd 68,0,398
+	shra 4,r19,r5
+	.stabd 68,0,399
+	.stabd 68,0,400
+	.stabd 68,0,401
+	.stabd 68,0,402
+	br .L230
+	and 15,r19,r6
+.L159:
+	.stabd 68,0,405
+	addu r17,r20,r16
+	shl 1,r18,r17
+	addu r17,r16,r17
+	.stabd 68,0,406
+	ld.b 0(r17),r16
+	and 0xff,r16,r5
+	.stabd 68,0,407
+	ld.b 1(r17),r16
+	.stabd 68,0,408
+	br .L142
+	and 0xff,r16,r6
+.L160:
+	.stabd 68,0,411
+	shl 1,r18,r16
+	addu r18,r16,r18
+	.stabd 68,0,412
+	addu r17,r20,r16
+	shra 3,r18,r17
+	addu r17,r16,r17
+	.stabd 68,0,413
+	and 7,r18,r16
+	or 128,r0,r28
+	shra r16,r28,r18
+	.stabd 68,0,414
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,415
+	and r18,r19,r0
+	bc .L161
+	br .L162
+	or 255,r0,r16
+.L161:
+	or 0,r0,r16
+.L162:
+	mov r16,r5
+	.stabd 68,0,416
+	shra 1,r18,r18
+	.stabd 68,0,417
+	btne r18,r0,.L163
+	.stabd 68,0,418
+	addu 1,r17,r17
+	.stabd 68,0,419
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,420
+	or 128,r0,r18
+.L163:
+	.stabd 68,0,422
+	and r18,r19,r0
+	bc .L164
+	br .L165
+	or 255,r0,r16
+.L164:
+	or 0,r0,r16
+.L165:
+	mov r16,r6
+	.stabd 68,0,423
+	shra 1,r18,r18
+	.stabd 68,0,424
+	btne r18,r0,.L166
+	.stabd 68,0,425
+	.stabd 68,0,426
+	ld.b 1(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,427
+	or 128,r0,r18
+.L166:
+	.stabd 68,0,429
+	and r18,r19,r0
+	bnc .L329
+	.stabd 68,0,430
+	br .L237
+	nop
+.L169:
+	.stabd 68,0,433
+	shl 1,r18,r16
+	addu r18,r16,r18
+	.stabd 68,0,434
+	shl 1,r18,r18
+	.stabd 68,0,435
+	addu r17,r20,r16
+	shra 3,r18,r17
+	addu r17,r16,r17
+	.stabd 68,0,436
+	and 7,r18,r16
+	subu 6,r16,r18
+	.stabd 68,0,437
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,438
+	shra r18,r19,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r5
+	.stabd 68,0,439
+	addu -2,r18,r18
+	.stabd 68,0,440
+	btne r18,r0,.L170
+	.stabd 68,0,441
+	addu 1,r17,r17
+	.stabd 68,0,442
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,443
+	or 6,r0,r18
+.L170:
+	.stabd 68,0,445
+	shra r18,r19,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r6
+	.stabd 68,0,446
+	addu -2,r18,r18
+	.stabd 68,0,447
+	btne r18,r0,.L171
+	.stabd 68,0,448
+	.stabd 68,0,449
+	ld.b 1(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,450
+	or 6,r0,r18
+.L171:
+	.stabd 68,0,452
+	.stabd 68,0,453
+	br .L324
+	shra r18,r19,r16
+.L172:
+	.stabd 68,0,456
+	shl 1,r18,r16
+	addu r18,r16,r18
+	.stabd 68,0,457
+	addu r17,r20,r16
+	shra 1,r18,r17
+	addu r17,r16,r17
+	.stabd 68,0,458
+	and 1,r18,r0
+	bc .L173
+	.stabd 68,0,459
+	ld.b 0(r17),r16
+	and 15,r16,r5
+	.stabd 68,0,460
+	ld.b 1(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,461
+	shra 4,r19,r6
+	.stabd 68,0,462
+	br .L242
+	and 15,r19,r7
+.L173:
+	.stabd 68,0,465
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,466
+	shra 4,r19,r5
+	.stabd 68,0,467
+	and 15,r19,r6
+	.stabd 68,0,468
+	ld.b 1(r17),r16
+	.stabd 68,0,470
+	.stabd 68,0,471
+	.stabd 68,0,472
+	.stabd 68,0,473
+	br .L330
+	nop
+.L175:
+	.stabd 68,0,476
+	addu r17,r20,r17
+	shl 1,r18,r16
+	addu r18,r16,r16
+	addu r16,r17,r17
+	.stabd 68,0,477
+	ld.b 0(r17),r16
+	and 0xff,r16,r5
+	addu 1,r17,r17
+	.stabd 68,0,478
+	ld.b 0(r17),r16
+	and 0xff,r16,r6
+	.stabd 68,0,479
+	ld.b 1(r17),r16
+	.stabd 68,0,480
+	br .L142
+	and 0xff,r16,r7
+.L176:
+	.stabd 68,0,483
+	addu r17,r20,r16
+	shra 1,r18,r17
+	.stabd 68,0,484
+	ld.b r17(r16),r16
+	and 0xff,r16,r19
+	.stabd 68,0,485
+	and 1,r18,r0
+	bc .L177
+	.stabd 68,0,486
+	and 8,r19,r0
+	bc .L178
+	br .L179
+	or 255,r0,r16
+.L178:
+	or 0,r0,r16
+.L179:
+	mov r16,r5
+	.stabd 68,0,487
+	and 4,r19,r0
+	bc .L180
+	br .L181
+	or 255,r0,r16
+.L180:
+	or 0,r0,r16
+.L181:
+	mov r16,r6
+	.stabd 68,0,488
+	and 2,r19,r0
+	bc .L182
+	br .L183
+	or 255,r0,r16
+.L182:
+	or 0,r0,r16
+.L183:
+	mov r16,r7
+	.stabd 68,0,489
+	and 1,r19,r0
+	bnc .L331
+	br .L251
+	nop
+.L177:
+	.stabd 68,0,492
+	and 128,r19,r0
+	bc .L187
+	br .L188
+	or 255,r0,r16
+.L187:
+	or 0,r0,r16
+.L188:
+	mov r16,r5
+	.stabd 68,0,493
+	and 64,r19,r0
+	bc .L189
+	br .L190
+	or 255,r0,r16
+.L189:
+	or 0,r0,r16
+.L190:
+	mov r16,r6
+	.stabd 68,0,494
+	and 32,r19,r0
+	bc .L191
+	br .L192
+	or 255,r0,r16
+.L191:
+	or 0,r0,r16
+.L192:
+	mov r16,r7
+	.stabd 68,0,495
+	and 16,r19,r0
+	bnc .L331
+	.stabd 68,0,497
+	br .L251
+	nop
+.L195:
+	.stabd 68,0,500
+	addu r17,r20,r16
+	.stabd 68,0,501
+	ld.b r18(r16),r16
+	and 0xff,r16,r19
+	.stabd 68,0,502
+	shra 6,r19,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r5
+	.stabd 68,0,503
+	shra 4,r19,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r6
+	.stabd 68,0,504
+	and 12,r19,r16
+	ld.l r16(r12),r7
+	.stabd 68,0,505
+	.stabd 68,0,506
+	br .L325
+	and 3,r19,r16
+.L196:
+	.stabd 68,0,509
+	addu r17,r20,r16
+	shl 1,r18,r17
+	addu r17,r16,r17
+	.stabd 68,0,510
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,511
+	shra 4,r19,r5
+	.stabd 68,0,512
+	and 15,r19,r6
+	.stabd 68,0,513
+	ld.b 1(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,514
+	shra 4,r19,r7
+	.stabd 68,0,515
+	.stabd 68,0,516
+	.stabd 68,0,517
+	.stabd 68,0,518
+	.stabd 68,0,519
+	.stabd 68,0,520
+	br .L256
+	and 15,r19,r10
+.L197:
+	.stabd 68,0,523
+	addu r17,r20,r16
+	shl 2,r18,r17
+	addu r17,r16,r17
+	.stabd 68,0,524
+	ld.b 0(r17),r16
+	and 0xff,r16,r5
+	addu 1,r17,r17
+	.stabd 68,0,525
+	ld.b 0(r17),r16
+	and 0xff,r16,r6
+	addu 1,r17,r17
+	.stabd 68,0,526
+	ld.b 0(r17),r16
+	and 0xff,r16,r7
+	.stabd 68,0,527
+	ld.b 1(r17),r16
+	.stabd 68,0,528
+	br .L142
+	and 0xff,r16,r10
+.L198:
+	.stabd 68,0,531
+	shl 2,r18,r16
+	addu r18,r16,r18
+	.stabd 68,0,532
+	addu r17,r20,r16
+	shra 3,r18,r17
+	addu r17,r16,r17
+	.stabd 68,0,533
+	and 7,r18,r16
+	or 128,r0,r28
+	shra r16,r28,r18
+	.stabd 68,0,534
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,535
+	and r18,r19,r0
+	bc .L199
+	br .L200
+	or 255,r0,r16
+.L199:
+	or 0,r0,r16
+.L200:
+	mov r16,r5
+	.stabd 68,0,536
+	shra 1,r18,r18
+	.stabd 68,0,537
+	btne r18,r0,.L201
+	.stabd 68,0,538
+	addu 1,r17,r17
+	.stabd 68,0,539
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,540
+	or 128,r0,r18
+.L201:
+	.stabd 68,0,542
+	and r18,r19,r0
+	bc .L202
+	br .L203
+	or 255,r0,r16
+.L202:
+	or 0,r0,r16
+.L203:
+	mov r16,r6
+	.stabd 68,0,543
+	shra 1,r18,r18
+	.stabd 68,0,544
+	btne r18,r0,.L204
+	.stabd 68,0,545
+	addu 1,r17,r17
+	.stabd 68,0,546
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,547
+	or 128,r0,r18
+.L204:
+	.stabd 68,0,549
+	and r18,r19,r0
+	bc .L205
+	br .L206
+	or 255,r0,r16
+.L205:
+	or 0,r0,r16
+.L206:
+	mov r16,r7
+	.stabd 68,0,550
+	shra 1,r18,r18
+	.stabd 68,0,551
+	btne r18,r0,.L207
+	.stabd 68,0,552
+	addu 1,r17,r17
+	.stabd 68,0,553
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,554
+	or 128,r0,r18
+.L207:
+	.stabd 68,0,556
+	and r18,r19,r0
+	bc .L208
+	br .L209
+	or 255,r0,r16
+.L208:
+	or 0,r0,r16
+.L209:
+	mov r16,r10
+	.stabd 68,0,557
+	shra 1,r18,r18
+	.stabd 68,0,558
+	btne r18,r0,.L210
+	.stabd 68,0,559
+	.stabd 68,0,560
+	ld.b 1(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,561
+	or 128,r0,r18
+.L210:
+	.stabd 68,0,563
+	and r18,r19,r0
+	bnc .L332
+	.stabd 68,0,564
+	br .L267
+	nop
+.L213:
+	.stabd 68,0,567
+	shl 2,r18,r16
+	addu r18,r16,r18
+	.stabd 68,0,568
+	shl 1,r18,r18
+	.stabd 68,0,569
+	addu r17,r20,r16
+	shra 3,r18,r17
+	addu r17,r16,r17
+	.stabd 68,0,570
+	and 7,r18,r16
+	subu 6,r16,r18
+	.stabd 68,0,571
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,572
+	shra r18,r19,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r5
+	.stabd 68,0,573
+	addu -2,r18,r18
+	.stabd 68,0,574
+	btne r18,r0,.L214
+	.stabd 68,0,575
+	addu 1,r17,r17
+	.stabd 68,0,576
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,577
+	or 6,r0,r18
+.L214:
+	.stabd 68,0,579
+	shra r18,r19,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r6
+	.stabd 68,0,580
+	addu -2,r18,r18
+	.stabd 68,0,581
+	btne r18,r0,.L215
+	.stabd 68,0,582
+	addu 1,r17,r17
+	.stabd 68,0,583
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,584
+	or 6,r0,r18
+.L215:
+	.stabd 68,0,586
+	shra r18,r19,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r7
+	.stabd 68,0,587
+	addu -2,r18,r18
+	.stabd 68,0,588
+	btne r18,r0,.L216
+	.stabd 68,0,589
+	addu 1,r17,r17
+	.stabd 68,0,590
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,591
+	or 6,r0,r18
+.L216:
+	.stabd 68,0,593
+	shra r18,r19,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r10
+	.stabd 68,0,594
+	addu -2,r18,r18
+	.stabd 68,0,595
+	btne r18,r0,.L217
+	.stabd 68,0,596
+	.stabd 68,0,597
+	ld.b 1(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,598
+	or 6,r0,r18
+.L217:
+	.stabd 68,0,600
+	.stabd 68,0,601
+	br .L326
+	shra r18,r19,r16
+.L218:
+	.stabd 68,0,604
+	shl 2,r18,r16
+	addu r18,r16,r18
+	.stabd 68,0,605
+	addu r17,r20,r16
+	shra 1,r18,r17
+	addu r17,r16,r17
+	.stabd 68,0,606
+	and 1,r18,r0
+	bc .L219
+	.stabd 68,0,607
+	ld.b 0(r17),r16
+	and 15,r16,r5
+	addu 1,r17,r17
+	.stabd 68,0,608
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,609
+	shra 4,r19,r6
+	.stabd 68,0,610
+	and 15,r19,r7
+	.stabd 68,0,611
+	ld.b 1(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,612
+	shra 4,r19,r10
+	.stabd 68,0,613
+	br .L272
+	and 15,r19,r11
+.L219:
+	.stabd 68,0,616
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	addu 1,r17,r17
+	.stabd 68,0,617
+	shra 4,r19,r5
+	.stabd 68,0,618
+	and 15,r19,r6
+	.stabd 68,0,619
+	ld.b 0(r17),r16
+	and 0xff,r16,r19
+	.stabd 68,0,620
+	shra 4,r19,r7
+	.stabd 68,0,621
+	and 15,r19,r10
+	.stabd 68,0,622
+	ld.b 1(r17),r16
+	.stabd 68,0,624
+	.stabd 68,0,625
+	.stabd 68,0,626
+	.stabd 68,0,627
+	.stabd 68,0,628
+	.stabd 68,0,629
+	br .L333
+	nop
+.L221:
+	.stabd 68,0,632
+	addu r17,r20,r17
+	shl 2,r18,r16
+	addu r18,r16,r16
+	addu r16,r17,r17
+	.stabd 68,0,633
+	ld.b 0(r17),r16
+	and 0xff,r16,r5
+	addu 1,r17,r17
+	.stabd 68,0,634
+	ld.b 0(r17),r16
+	and 0xff,r16,r6
+	addu 1,r17,r17
+	.stabd 68,0,635
+	ld.b 0(r17),r16
+	and 0xff,r16,r7
+	addu 1,r17,r17
+	.stabd 68,0,636
+	ld.b 0(r17),r16
+	and 0xff,r16,r10
+	.stabd 68,0,637
+	ld.b 1(r17),r16
+	.stabd 68,0,638
+	br .L327
+	nop
+.L222:
+	.stabd 68,0,641
+	shra 3,r18,r16
+	addu r16,r17,r17
+	.stabd 68,0,642
+	and 7,r18,r16
+	or 128,r0,r28
+	shra r16,r28,r18
+	.stabd 68,0,643
+	ld.b r17(r20),r16
+	and 0xff,r16,r16
+	and r18,r16,r0
+	bc .L223
+	br .L224
+	or 255,r0,r16
+.L223:
+	or 0,r0,r16
+.L224:
+	mov r16,r5
+	.stabd 68,0,644
+	ld.b r17(r21),r16
+	and 0xff,r16,r16
+	and r18,r16,r0
+	bc .L225
+.L328:
+	br .L226
+	or 255,r0,r16
+.L225:
+	or 0,r0,r16
+.L226:
+	.stabd 68,0,645
+	br .L142
+	mov r16,r6
+.L227:
+	.stabd 68,0,648
+	shl 1,r18,r18
+	.stabd 68,0,649
+	shra 3,r18,r16
+	addu r16,r17,r17
+	.stabd 68,0,650
+	and 7,r18,r16
+	subu 6,r16,r18
+	.stabd 68,0,651
+	ld.b r17(r20),r16
+	and 0xff,r16,r16
+	shra r18,r16,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r5
+	.stabd 68,0,652
+	ld.b r17(r21),r16
+	and 0xff,r16,r16
+	shra r18,r16,r16
+.L323:
+	and 3,r16,r16
+	shl 2,r16,r16
+	.stabd 68,0,653
+	br .L142
+	ld.l r16(r12),r6
+.L228:
+	.stabd 68,0,656
+	shra 1,r18,r16
+	addu r16,r17,r17
+	.stabd 68,0,657
+	and 1,r18,r0
+	bc .L229
+	.stabd 68,0,658
+	ld.b r17(r20),r16
+	and 15,r16,r5
+	.stabd 68,0,659
+	ld.b r17(r21),r16
+	br .L230
+	and 15,r16,r6
+.L229:
+	.stabd 68,0,662
+	ld.b r17(r20),r16
+	and 0xff,r16,r16
+	shr 4,r16,r5
+	.stabd 68,0,663
+	ld.b r17(r21),r16
+	and 0xff,r16,r16
+	shr 4,r16,r6
+.L230:
+	.stabd 68,0,665
+	shl 4,r5,r16
+	or r16,r5,r5
+	.stabd 68,0,666
+	shl 4,r6,r16
+	.stabd 68,0,667
+	br .L142
+	or r16,r6,r6
+.L231:
+	.stabd 68,0,670
+	addu r18,r17,r17
+	.stabd 68,0,671
+	ld.b r17(r20),r16
+	and 0xff,r16,r5
+	.stabd 68,0,672
+	ld.b r17(r21),r16
+	.stabd 68,0,673
+	br .L142
+	and 0xff,r16,r6
+.L232:
+	.stabd 68,0,676
+	shra 3,r18,r16
+	addu r16,r17,r17
+	.stabd 68,0,677
+	and 7,r18,r16
+	or 128,r0,r28
+	shra r16,r28,r18
+	.stabd 68,0,678
+	ld.b r17(r20),r16
+	and 0xff,r16,r16
+	and r18,r16,r0
+	bc .L233
+	br .L234
+	or 255,r0,r16
+.L233:
+	or 0,r0,r16
+.L234:
+	mov r16,r5
+	.stabd 68,0,679
+	ld.b r17(r21),r16
+	and 0xff,r16,r16
+	and r18,r16,r0
+	bc .L235
+	br .L236
+	or 255,r0,r16
+.L235:
+	or 0,r0,r16
+.L236:
+	mov r16,r6
+	.stabd 68,0,680
+	ld.b r17(r22),r16
+	and 0xff,r16,r16
+	and r18,r16,r0
+	bc .L237
+.L329:
+	br .L238
+	or 255,r0,r16
+.L237:
+	or 0,r0,r16
+.L238:
+	.stabd 68,0,681
+	br .L142
+	mov r16,r7
+.L239:
+	.stabd 68,0,684
+	shl 1,r18,r18
+	.stabd 68,0,685
+	shra 3,r18,r16
+	addu r16,r17,r17
+	.stabd 68,0,686
+	and 7,r18,r16
+	subu 6,r16,r18
+	.stabd 68,0,687
+	ld.b r17(r20),r16
+	and 0xff,r16,r16
+	shra r18,r16,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r5
+	.stabd 68,0,688
+	ld.b r17(r21),r16
+	and 0xff,r16,r16
+	shra r18,r16,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r6
+	.stabd 68,0,689
+	ld.b r17(r22),r16
+	and 0xff,r16,r16
+	shra r18,r16,r16
+.L324:
+	and 3,r16,r16
+	shl 2,r16,r16
+	.stabd 68,0,690
+	br .L142
+	ld.l r16(r12),r7
+.L240:
+	.stabd 68,0,693
+	shra 1,r18,r16
+	addu r16,r17,r17
+	.stabd 68,0,694
+	and 1,r18,r0
+	bc .L241
+	.stabd 68,0,695
+	ld.b r17(r20),r16
+	and 15,r16,r5
+	.stabd 68,0,696
+	ld.b r17(r21),r16
+	and 15,r16,r6
+	.stabd 68,0,697
+	ld.b r17(r22),r16
+	br .L242
+	and 15,r16,r7
+.L241:
+	.stabd 68,0,700
+	ld.b r17(r20),r16
+	and 0xff,r16,r16
+	shr 4,r16,r5
+	.stabd 68,0,701
+	ld.b r17(r21),r16
+	and 0xff,r16,r16
+	shr 4,r16,r6
+	.stabd 68,0,702
+	ld.b r17(r22),r16
+.L330:
+	and 0xff,r16,r16
+	shr 4,r16,r7
+.L242:
+	.stabd 68,0,704
+	shl 4,r5,r16
+	or r16,r5,r5
+	.stabd 68,0,705
+	shl 4,r6,r16
+	or r16,r6,r6
+	.stabd 68,0,706
+	shl 4,r7,r16
+	.stabd 68,0,707
+	br .L142
+	or r16,r7,r7
+.L243:
+	.stabd 68,0,710
+	addu r18,r17,r17
+	.stabd 68,0,711
+	ld.b r17(r20),r16
+	and 0xff,r16,r5
+	.stabd 68,0,712
+	ld.b r17(r21),r16
+	and 0xff,r16,r6
+	.stabd 68,0,713
+	ld.b r17(r22),r16
+	.stabd 68,0,714
+	br .L142
+	and 0xff,r16,r7
+.L244:
+	.stabd 68,0,717
+	shra 3,r18,r16
+	addu r16,r17,r17
+	.stabd 68,0,718
+	and 7,r18,r16
+	or 128,r0,r28
+	shra r16,r28,r18
+	.stabd 68,0,719
+	ld.b r17(r20),r16
+	and 0xff,r16,r16
+	and r18,r16,r0
+	bc .L245
+	br .L246
+	or 255,r0,r16
+.L245:
+	or 0,r0,r16
+.L246:
+	mov r16,r5
+	.stabd 68,0,720
+	ld.b r17(r21),r16
+	and 0xff,r16,r16
+	and r18,r16,r0
+	bc .L247
+	br .L248
+	or 255,r0,r16
+.L247:
+	or 0,r0,r16
+.L248:
+	mov r16,r6
+	.stabd 68,0,721
+	ld.b r17(r22),r16
+	and 0xff,r16,r16
+	and r18,r16,r0
+	bc .L249
+	br .L250
+	or 255,r0,r16
+.L249:
+	or 0,r0,r16
+.L250:
+	mov r16,r7
+	.stabd 68,0,722
+	ld.b r17(r23),r16
+	and 0xff,r16,r16
+	and r18,r16,r0
+	bc .L251
+.L331:
+	br .L252
+	or 255,r0,r16
+.L251:
+	or 0,r0,r16
+.L252:
+	.stabd 68,0,723
+	br .L142
+	mov r16,r10
+.L253:
+	.stabd 68,0,726
+	shl 1,r18,r18
+	.stabd 68,0,727
+	shra 3,r18,r16
+	addu r16,r17,r17
+	.stabd 68,0,728
+	and 7,r18,r16
+	subu 6,r16,r18
+	.stabd 68,0,729
+	ld.b r17(r20),r16
+	and 0xff,r16,r16
+	shra r18,r16,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r5
+	.stabd 68,0,730
+	ld.b r17(r21),r16
+	and 0xff,r16,r16
+	shra r18,r16,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r6
+	.stabd 68,0,731
+	ld.b r17(r22),r16
+	and 0xff,r16,r16
+	shra r18,r16,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r7
+	.stabd 68,0,732
+	ld.b r17(r23),r16
+	and 0xff,r16,r16
+	shra r18,r16,r16
+	and 3,r16,r16
+.L325:
+	shl 2,r16,r16
+	.stabd 68,0,733
+	br .L142
+	ld.l r16(r12),r10
+.L254:
+	.stabd 68,0,736
+	shra 1,r18,r16
+	addu r16,r17,r17
+	.stabd 68,0,737
+	and 1,r18,r0
+	bc .L255
+	.stabd 68,0,738
+	ld.b r17(r20),r16
+	and 15,r16,r5
+	.stabd 68,0,739
+	ld.b r17(r21),r16
+	and 15,r16,r6
+	.stabd 68,0,740
+	ld.b r17(r22),r16
+	and 15,r16,r7
+	.stabd 68,0,741
+	ld.b r17(r23),r16
+	br .L256
+	and 15,r16,r10
+.L255:
+	.stabd 68,0,744
+	ld.b r17(r20),r16
+	and 0xff,r16,r16
+	shr 4,r16,r5
+	.stabd 68,0,745
+	ld.b r17(r21),r16
+	and 0xff,r16,r16
+	shr 4,r16,r6
+	.stabd 68,0,746
+	ld.b r17(r22),r16
+	and 0xff,r16,r16
+	shr 4,r16,r7
+	.stabd 68,0,747
+	ld.b r17(r23),r16
+	and 0xff,r16,r16
+	shr 4,r16,r10
+.L256:
+	.stabd 68,0,749
+	shl 4,r5,r16
+	or r16,r5,r5
+	.stabd 68,0,750
+	shl 4,r6,r16
+	or r16,r6,r6
+	.stabd 68,0,751
+	shl 4,r7,r16
+	or r16,r7,r7
+	.stabd 68,0,752
+	shl 4,r10,r16
+	.stabd 68,0,753
+	br .L142
+	or r16,r10,r10
+.L257:
+	.stabd 68,0,756
+	addu r18,r17,r17
+	.stabd 68,0,757
+	ld.b r17(r20),r16
+	and 0xff,r16,r5
+	.stabd 68,0,758
+	ld.b r17(r21),r16
+	and 0xff,r16,r6
+	.stabd 68,0,759
+	ld.b r17(r22),r16
+	and 0xff,r16,r7
+	.stabd 68,0,760
+	ld.b r17(r23),r16
+	.stabd 68,0,761
+	br .L142
+	and 0xff,r16,r10
+.L258:
+	.stabd 68,0,764
+	shra 3,r18,r16
+	addu r16,r17,r17
+	.stabd 68,0,765
+	and 7,r18,r16
+	or 128,r0,r28
+	shra r16,r28,r18
+	.stabd 68,0,766
+	ld.b r17(r20),r16
+	and 0xff,r16,r16
+	and r18,r16,r0
+	bc .L259
+	br .L260
+	or 255,r0,r16
+.L259:
+	or 0,r0,r16
+.L260:
+	mov r16,r5
+	.stabd 68,0,767
+	ld.b r17(r21),r16
+	and 0xff,r16,r16
+	and r18,r16,r0
+	bc .L261
+	br .L262
+	or 255,r0,r16
+.L261:
+	or 0,r0,r16
+.L262:
+	mov r16,r6
+	.stabd 68,0,768
+	ld.b r17(r22),r16
+	and 0xff,r16,r16
+	and r18,r16,r0
+	bc .L263
+	br .L264
+	or 255,r0,r16
+.L263:
+	or 0,r0,r16
+.L264:
+	mov r16,r7
+	.stabd 68,0,769
+	ld.b r17(r23),r16
+	and 0xff,r16,r16
+	and r18,r16,r0
+	bc .L265
+	br .L266
+	or 255,r0,r16
+.L265:
+	or 0,r0,r16
+.L266:
+	mov r16,r10
+	.stabd 68,0,770
+	ld.b r17(r26),r16
+	and 0xff,r16,r16
+	and r18,r16,r0
+	bc .L267
+.L332:
+	br .L268
+	or 255,r0,r16
+.L267:
+	or 0,r0,r16
+.L268:
+	.stabd 68,0,771
+	br .L142
+	mov r16,r11
+.L269:
+	.stabd 68,0,774
+	shl 1,r18,r18
+	.stabd 68,0,775
+	shra 3,r18,r16
+	addu r16,r17,r17
+	.stabd 68,0,776
+	and 7,r18,r16
+	subu 6,r16,r18
+	.stabd 68,0,777
+	ld.b r17(r20),r16
+	and 0xff,r16,r16
+	shra r18,r16,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r5
+	.stabd 68,0,778
+	ld.b r17(r21),r16
+	and 0xff,r16,r16
+	shra r18,r16,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r6
+	.stabd 68,0,779
+	ld.b r17(r22),r16
+	and 0xff,r16,r16
+	shra r18,r16,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r7
+	.stabd 68,0,780
+	ld.b r17(r23),r16
+	and 0xff,r16,r16
+	shra r18,r16,r16
+	and 3,r16,r16
+	shl 2,r16,r16
+	ld.l r16(r12),r10
+	.stabd 68,0,781
+	ld.b r17(r26),r16
+	and 0xff,r16,r16
+	shra r18,r16,r16
+.L326:
+	and 3,r16,r16
+	shl 2,r16,r16
+	.stabd 68,0,782
+	br .L142
+	ld.l r16(r12),r11
+.L270:
+	.stabd 68,0,785
+	shra 1,r18,r16
+	addu r16,r17,r17
+	.stabd 68,0,786
+	and 1,r18,r0
+	bc .L271
+	.stabd 68,0,787
+	ld.b r17(r20),r16
+	and 15,r16,r5
+	.stabd 68,0,788
+	ld.b r17(r21),r16
+	and 15,r16,r6
+	.stabd 68,0,789
+	ld.b r17(r22),r16
+	and 15,r16,r7
+	.stabd 68,0,790
+	ld.b r17(r23),r16
+	and 15,r16,r10
+	.stabd 68,0,791
+	ld.b r17(r26),r16
+	br .L272
+	and 15,r16,r11
+.L271:
+	.stabd 68,0,794
+	ld.b r17(r20),r16
+	and 0xff,r16,r16
+	shr 4,r16,r5
+	.stabd 68,0,795
+	ld.b r17(r21),r16
+	and 0xff,r16,r16
+	shr 4,r16,r6
+	.stabd 68,0,796
+	ld.b r17(r22),r16
+	and 0xff,r16,r16
+	shr 4,r16,r7
+	.stabd 68,0,797
+	ld.b r17(r23),r16
+	and 0xff,r16,r16
+	shr 4,r16,r10
+	.stabd 68,0,798
+	ld.b r17(r26),r16
+.L333:
+	and 0xff,r16,r16
+	shr 4,r16,r11
+.L272:
+	.stabd 68,0,800
+	shl 4,r5,r16
+	or r16,r5,r5
+	.stabd 68,0,801
+	shl 4,r6,r16
+	or r16,r6,r6
+	.stabd 68,0,802
+	shl 4,r7,r16
+	or r16,r7,r7
+	.stabd 68,0,803
+	shl 4,r10,r16
+	or r16,r10,r10
+	.stabd 68,0,804
+	shl 4,r11,r16
+	.stabd 68,0,805
+	br .L142
+	or r16,r11,r11
+.L273:
+	.stabd 68,0,808
+	addu r18,r17,r17
+	.stabd 68,0,809
+	ld.b r17(r20),r16
+	and 0xff,r16,r5
+	.stabd 68,0,810
+	ld.b r17(r21),r16
+	and 0xff,r16,r6
+	.stabd 68,0,811
+	ld.b r17(r22),r16
+	and 0xff,r16,r7
+	.stabd 68,0,812
+	ld.b r17(r23),r16
+	and 0xff,r16,r10
+	.stabd 68,0,813
+	ld.b r17(r26),r16
+.L327:
+	and 0xff,r16,r11
+	.stabd 68,0,814
+.L142:
+	.stabd 68,0,817
+	ld.l -324(fp),r28
+	subs 2,r28,r0
+	bc .L276
+	.stabd 68,0,818
+	ld.l -300(fp),r28
+	btne r28,r0,.L277
+	.stabd 68,0,819
+	or 255,r0,r6
+.L277:
+	.stabd 68,0,820
+	ld.l -316(fp),r28
+	btne r28,r0,.L278
+	.stabd 68,0,821
+	shl 24,r5,r16
+	shl 16,r5,r17
+	or r17,r16,r16
+	shl 8,r5,r17
+	or r17,r16,r16
+	br .L141
+	or r6,r16,r5
+.L278:
+	.stabd 68,0,823
+	ld.l -292(fp),r28
+	bte r28,r0,.L280
+	ld.b r5(r28),r16
+	br .L281
+	and 0xff,r16,r16
+.L280:
+	mov r5,r16
+.L281:
+	shl 8,r16,r10
+	.stabd 68,0,824
+	ld.l -284(fp),r28
+	bte r28,r0,.L282
+	ld.b r5(r28),r16
+	br .L283
+	and 0xff,r16,r16
+.L282:
+	mov r5,r16
+.L283:
+	shl 16,r16,r7
+	.stabd 68,0,825
+	ld.l -276(fp),r28
+	bte r28,r0,.L284
+	ld.b r5(r28),r16
+	br .L285
+	and 0xff,r16,r16
+.L284:
+	mov r5,r16
+.L285:
+	shl 24,r16,r5
+	.stabd 68,0,826
+	or r10,r7,r16
+	or r6,r16,r16
+	br .L141
+	or r16,r5,r5
+.L276:
+	.stabd 68,0,829
+	ld.l -308(fp),r28
+	bte r28,r0,.L287
+	.stabd 68,0,830
+	or 255,r0,r16
+	subu r16,r10,r16
+	subu r16,r5,r5
+	.stabd 68,0,831
+	subu r16,r6,r6
+	.stabd 68,0,832
+	subu r16,r7,r7
+	.stabd 68,0,833
+	adds 0,r5,r0
+	bnc .L288
+	or 0,r0,r5
+.L288:
+	.stabd 68,0,834
+	adds 0,r6,r0
+	bnc .L289
+	or 0,r0,r6
+.L289:
+	.stabd 68,0,835
+	adds 0,r7,r0
+	bnc .L290
+	or 0,r0,r7
+.L290:
+	.stabd 68,0,836
+	ld.l -300(fp),r28
+	bte r28,r0,.L287
+	.stabd 68,0,837
+	mov r11,r10
+.L287:
+	.stabd 68,0,839
+	ld.l -300(fp),r28
+	btne r28,r0,.L292
+	.stabd 68,0,840
+	or 255,r0,r10
+.L292:
+	.stabd 68,0,841
+	ld.l -316(fp),r28
+	bte r28,r0,.L293
+	.stabd 68,0,842
+	ld.l -276(fp),r28
+	bte r28,r0,.L294
+	.stabd 68,0,843
+	ld.b r5(r28),r16
+	and 0xff,r16,r5
+.L294:
+	.stabd 68,0,844
+	ld.l -284(fp),r28
+	bte r28,r0,.L295
+	.stabd 68,0,845
+	ld.b r6(r28),r16
+	and 0xff,r16,r6
+.L295:
+	.stabd 68,0,846
+	ld.l -292(fp),r28
+	bte r28,r0,.L293
+	.stabd 68,0,847
+	ld.b r7(r28),r16
+	and 0xff,r16,r7
+.L293:
+	.stabd 68,0,853
+	ld.l -268(fp),r28
+	bte r28,r0,.L297
+	shl 8,r5,r16
+	and 61440,r16,r16
+	shl 4,r6,r17
+	and 3840,r17,r17
+	or r17,r16,r16
+	and 240,r7,r17
+	or r17,r16,r16
+	shra 4,r10,r17
+	br .L298
+	or r17,r16,r16
+.L297:
+	shl 24,r5,r16
+	shl 16,r6,r17
+	or r17,r16,r16
+	shl 8,r7,r17
+	or r17,r16,r16
+	or r10,r16,r16
+.L298:
+	mov r16,r5
+.LBE10:
+.L141:
+	.stabd 68,0,860
+	ld.l -268(fp),r28
+	bte r28,r0,.L299
+	.stabd 68,0,861
+	ld.l -260(fp),r28
+	st.s r5,0(r28)
+	ld.l -260(fp),r30
+	addu 2,r30,r28
+	br .L300
+	st.l r28,-260(fp)
+.L299:
+	.stabd 68,0,863
+	st.l r5,0(r8)
+	addu 4,r8,r8
+.L300:
+	.stabd 68,0,867
+	subu r24,r9,r24
+	.stabd 68,0,868
+	subs 0,r24,r0
+	bc .L301
+	.stabd 68,0,869
+.L302:
+	ld.l -204(fp),r28
+	ld.l -436(fp),r30
+	addu r30,r28,r30
+	st.l r30,-204(fp)
+	orh h%65536,r0,r28
+	addu r28,r24,r24
+	subs 0,r24,r0
+	bnc .L302
+	.stabd 68,0,870
+	or 1,r0,r27
+.L301:
+	.stabd 68,0,872
+	ld.l -428(fp),r28
+	subu r25,r28,r25
+	.stabd 68,0,873
+	subs 0,r25,r0
+	bc .L139
+	.stabd 68,0,874
+.L306:
+	ld.l -196(fp),r30
+	addu r4,r30,r28
+	st.l r28,-196(fp)
+	orh h%65536,r0,r28
+	addu r28,r25,r25
+	subs 0,r25,r0
+	bnc .L306
+	.stabd 68,0,875
+	or 1,r0,r27
+.L139:
+	addu -1,r29,r29
+	adds -1,r0,r16
+	btne r29,r16,.L309
+.LBE9:
+.L106:
+	ld.l -124(fp),r30
+	addu -1,r30,r28
+	st.l r28,-124(fp)
+	adds 0,r28,r0
+	bnc .L310
+	.stabd 68,0,880
+	ld.l -108(fp),r30
+	addu 1,r30,r28
+	st.l r28,-108(fp)
+	ld.l -116(fp),r30
+	subs r30,r28,r0
+	bc .L103
+	.stabd 68,0,881
+	ld.l -68(fp),r28
+	bte r28,r0,.L102
+	.stabd 68,0,882
+	ld.l -108(fp),r28
+	btne r28,r30,.L313
+	.stabd 68,0,883
+	ld.s -26(fp),r16
+	ld.l -140(fp),r28
+	addu r28,r16,r28
+	st.l r28,-156(fp)
+	.stabd 68,0,884
+	ld.s -14(fp),r16
+	ld.l -140(fp),r28
+	addu r28,r16,r28
+	br .L102
+	st.l r28,-164(fp)
+.L313:
+	.stabd 68,0,887
+	ld.l -244(fp),r28
+	bte r28,r0,.L315
+	ld.l -24(fp),r16
+	shra 16,r16,r28
+	st.l r28,-156(fp)
+	ld.l -20(fp),r17
+	addu r17,r16,r16
+	st.l r16,-24(fp)
+.L315:
+	.stabd 68,0,888
+	ld.l -252(fp),r28
+	bte r28,r0,.L102
+	ld.l -12(fp),r16
+	shra 16,r16,r28
+	st.l r28,-164(fp)
+	ld.l -8(fp),r17
+	addu r17,r16,r16
+	br .L102
+	st.l r16,-12(fp)
+.L103:
+	.stabd 68,0,892
+	ld.l -68(fp),r28
+	bte r28,r0,.L92
+	ld.l -68(fp),r30
+	addu 28,r30,r28
+	st.l r28,-68(fp)
+.L92:
+	ld.l -60(fp),r30
+	addu -1,r30,r28
+	st.l r28,-60(fp)
+	adds 0,r28,r0
+	bnc .L318
+	.stabd 68,0,894
+	ld.l -84(fp),r28
+	ld.l 4(r28),r17
+	ld.l 8(r28),r16
+	ld.l 12(r17),r17
+	calli r17
+	nop
+.LBE2:
+	.stabd 68,0,895
+	ld.l -520(fp),r4
+	ld.l -516(fp),r5
+	ld.l -512(fp),r6
+	ld.l -508(fp),r7
+	ld.l -504(fp),r8
+	ld.l -500(fp),r9
+	ld.l -496(fp),r10
+	ld.l -492(fp),r11
+	ld.l -488(fp),r12
+	ld.l -484(fp),r13
+	ld.l -480(fp),r14
+	ld.l -476(fp),r15
+	fld.d -472(fp),f2
+	fld.d -464(fp),f4
+	fld.d -456(fp),f6
+	ld.l 4(fp),r1
+	ld.l 0(fp),fp
+	bri r1
+	addu 528,sp,sp
+.stabs "Im110:F15",36,0,0,_Im110
+.stabs "items:p3",128,0,0,-60
+.stabs "t:p67",128,0,0,-68
+.stabs "run:p76",128,0,0,-76
+.stabs "args:p136=*129",128,0,0,-84
+.stabs "items:3",128,0,0,-60
+.stabs "t:67",128,0,0,-68
+.stabs "run:76",128,0,0,-76
+.stabs "args:136",128,0,0,-84
+.stabs "info:r130",64,0,0,4
+.stabs "image:78",128,0,0,-92
+.stabs "source:71",128,0,0,-100
+.stabs "trap:53",128,0,0,-32
+.stabs "c:25",128,0,0,-40
+.stabs "data0:r3",64,0,0,5
+.stabs "data1:r3",64,0,0,6
+.stabs "data2:r3",64,0,0,7
+.stabs "data3:r3",64,0,0,10
+.stabs "data4:r3",64,0,0,11
+.stabs "y:3",128,0,0,-108
+.stabs "ylast:3",128,0,0,-116
+.stabs "pairs:3",128,0,0,-124
+.stabs "wbytes:3",128,0,0,-132
+.stabs "xoffset:3",128,0,0,-140
+.stabs "yoffset:3",128,0,0,-148
+.stabs "txl:3",128,0,0,-156
+.stabs "txr:3",128,0,0,-164
+.stabs "xx:3",128,0,0,-172
+.stabs "yy:3",128,0,0,-180
+.stabs "units:r3",64,0,0,29
+.stabs "srcXprv:r3",64,0,0,16
+.stabs "srcYprv:r3",64,0,0,17
+.stabs "buffptr:17",128,0,0,-188
+.stabs "sv:51",128,0,0,-48
+.stabs "svy:51",128,0,0,-56
+.stabs "fxdSrcX:3",128,0,0,-196
+.stabs "fxdSrcY:3",128,0,0,-204
+.stabs "fX:r3",64,0,0,14
+.stabs "fY:r3",64,0,0,13
+.stabs "srcLX:3",128,0,0,-212
+.stabs "srcLY:3",128,0,0,-220
+.stabs "srcGX:3",128,0,0,-228
+.stabs "srcGY:3",128,0,0,-236
+.stabs "leftSlope:4",128,0,0,-244
+.stabs "rightSlope:4",128,0,0,-252
+.stabs "destunit:r23",64,0,0,8
+.stabs "destbase:r23",64,0,0,8
+.stabs "sh_destunit:22",128,0,0,-260
+.stabs "twelvebit:1",128,0,0,-268
+.stabs "tfrRed:21",128,0,0,-276
+.stabs "tfrGreen:21",128,0,0,-284
+.stabs "tfrBlue:21",128,0,0,-292
+.stabs "sourceType:r135",64,0,0,15
+.stabs "alpha:4",128,0,0,-300
+.stabs "ucRemove:4",128,0,0,-308
+.stabs "tfr:4",128,0,0,-316
+.stabs "nChannels:3",128,0,0,-324
+.stabn 192,0,0,.LBB2
+.stabs "xl:r1",64,0,0,4
+.stabs "xr:r1",64,0,0,9
+.stabn 192,0,0,.LBB3
+.stabs "diff:r1",64,0,0,18
+.stabn 192,0,0,.LBB4
+.stabn 224,0,0,.LBE4
+.stabs "diff:r1",64,0,0,18
+.stabn 192,0,0,.LBB5
+.stabn 224,0,0,.LBE5
+.stabs "X:r3",64,0,0,18
+.stabs "Y:r3",64,0,0,16
+.stabn 192,0,0,.LBB6
+.stabn 224,0,0,.LBE6
+.stabn 192,0,0,.LBB7
+.stabn 192,0,0,.LBB8
+.stabn 224,0,0,.LBE8
+.stabn 224,0,0,.LBE7
+.stabn 224,0,0,.LBE3
+.stabs "ex:r3",64,0,0,25
+.stabs "ey:r3",64,0,0,24
+.stabs "sData:r3",64,0,0,19
+.stabs "srcPix:r3",64,0,0,18
+.stabs "sample0:r21",64,0,0,20
+.stabs "sample1:r21",64,0,0,21
+.stabs "sample2:r21",64,0,0,22
+.stabs "sample3:r21",64,0,0,23
+.stabs "sample4:r21",64,0,0,26
+.stabs "dx:3",128,0,0,-428
+.stabs "dy:r3",64,0,0,9
+.stabs "xStep:r3",64,0,0,4
+.stabs "yStep:3",128,0,0,-436
+.stabs "needData:r4",64,0,0,27
+.stabn 192,0,0,.LBB9
+.stabs "srcLoc:r21",64,0,0,17
+.stabs "x:r3",64,0,0,18
+.stabs "loc:r3",64,0,0,17
+.stabn 192,0,0,.LBB10
+.stabn 224,0,0,.LBE10
+.stabn 224,0,0,.LBE9
+.stabn 224,0,0,.LBE2
