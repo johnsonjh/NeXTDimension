@@ -1,0 +1,115 @@
+/*
+ * Copyright 1990 NeXT, Inc.
+ *
+ * NextDimension Prototype kernel server.
+ *
+ */
+
+#include <std_types.defs>
+import "ND/ND_types.h";
+import <mach_types.h>;
+
+subsystem ND_Kern 1953;
+
+serverprefix ND_Kern_;
+userprefix ND_Kern_;
+
+type	String256	= (MSG_TYPE_STRING,8*256);
+
+/* For memory mapper services.  These all map to 32 bit types. */
+type vm_address_t = int;
+type vm_offset_t = int;
+type vm_size_t = int;
+type vm_prot_t = int;
+
+/*
+ * For i860/host pager stuff.
+ *
+ *	A vm_movepage_t structure consists of a starting virt address, phys address,
+ *	and length in bytes.  A single pager request may ask for up to 16 regions
+ * 	to be moved at one time.  We use this in the kernel when we flush a large
+ *	number of pages at once, as in a msg_send with out of line data.
+ */
+
+type vm_movepage_t = struct[3] of int;
+type vm_movepages_t = array[*:16] of vm_movepage_t;
+
+/*
+ * NextDimension kernel services support stuff.
+ *
+ * This module defines an interface between the task running on the i860 and needed
+ * kernel services on the host.  The User module is imported by ../NDkernel/ND to
+ * define the client side interface.
+ *
+ * Each defined entry point has both a sent port and a reply port passed to it, to
+ * avoid calling in the MiG generated per-thread reply port code.  A wrap function on
+ * each side of the interface takes care of munging the parameters into the appropriate
+ * format.
+ */
+
+/* Support for memory management: These are used to manage the backing store image. */
+routine vm_allocate(
+	requestport	device_port	: port_t;
+	replyport	reply		: port_t;
+	inout		address		: vm_address_t;
+			size		: vm_size_t;
+			anywhere	: boolean_t );
+
+routine vm_deallocate(
+	requestport	device_port	: port_t;
+	replyport	reply		: port_t;
+			address		: vm_address_t;
+			size		: vm_size_t );
+
+routine vm_protect(
+	requestport	device_port	: port_t;
+	replyport	reply		: port_t;
+			address		: vm_address_t;
+			size		: vm_size_t;
+			set_maximum	: boolean_t;
+			new_protection	: vm_prot_t );
+
+/* Support for moving pages between the i860 DRAM and the backing store. */
+
+routine page_in(
+	requestport	device_port	: port_t;
+	replyport	reply		: port_t;
+			pagelist	: vm_movepages_t );
+	/* MiG adds a parameter of the number of vm_movepage_t objects in the list */
+
+routine page_out(
+	requestport	device_port	: port_t;
+	replyport	reply		: port_t;
+			pagelist	: vm_movepages_t );
+	/* MiG adds a parameter of the number of vm_movepage_t objects in the list */
+
+/* Support for ports: These are used to manage the port set seen by the i860 apps. */
+
+routine port_allocate(
+	requestport	device_port	: port_t;
+	replyport	reply		: port_t;
+	out		port_name	: port_t );
+	
+routine port_deallocate(
+	requestport	device_port	: port_t;
+	replyport	reply		: port_t;
+			port_name	: port_t );
+
+/* Port name service: Manage a mapping between an ASCII string and a port_t. */
+
+routine port_check_in(
+	requestport	device_port	: port_t;
+	replyport	reply		: port_t;
+			port_name	: String256;
+			port_id		: port_t );
+
+routine port_look_up(
+	requestport	device_port	: port_t;
+	replyport	reply		: port_t;
+			port_name	: String256;
+		    out port_id		: port_t );
+
+routine port_check_out(
+	requestport	device_port	: port_t;
+	replyport	reply		: port_t;
+			port_name	: String256 );

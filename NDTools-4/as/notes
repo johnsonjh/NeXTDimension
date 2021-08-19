@@ -1,0 +1,25 @@
+
+Changes for the 0.91 release (the -10 compiler release):
+
+* s.stone fixed a bug in `#APP', `#NO_APP' that affected read.c & strstr.c.
+
++ Fixed a bug in converting to Mach-O object files with the new sections
+  for the objective-C runtime.  The bug was if a local relocation item refered
+  to a symbol plus an offset the incorrect section number could be assigned if
+  the value of the symbol plus offset was in a different section than the value
+  of the symbol.  This is an un fixable bug in atom(1) but fixed in here by
+  moving the assignment of the section number into the r_symbolnum field into
+  the assembler and using just the symbol's value (not plus the offset) to pick
+  the section number.  The fix is in write.c in emit_relocation() (plus a call
+  to a new function get_objc_section_bounds() before calling emit_relocation).
++ Fixed a bug where a file had no symbols and the result was a Mach-O file.
+  What would happen was a 4 (the size of the string table) was written at offset
+  0 in the output file (overwriting the magic number).  Also did some major
+  clean up of atom.c and removed all the garbage that did not apply (about half
+  of what was there).
++ Added the .reference pseudo op to read.c.  This was added for the new
+  objective-C runtime to use so that archive semantaic could be maintained but
+  no globals (that 'C' could use) are created.
++ Fixed the exponent overflow handling in atof-m68k.c to not print a warning
+  (ifdef NeXT) and to get the right answer (a bzero of the 'words' as added,
+  and corrected the reversed sign for infinities).

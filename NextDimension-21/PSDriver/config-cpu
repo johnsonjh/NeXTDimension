@@ -1,0 +1,21 @@
+
+CPUTYPE = i860
+LIB860 = ../../NDkernel
+BINDOBJ = ../../cmds/bind.o
+INC860 = ../../include.i860
+TOOLDIR=/Net/k9/dps/nd_proj/
+NDLIB860 = $(TOOLDIR)/i860/lib
+CC = $(TOOLDIR)/bin/cc860 -I$(INC860) -DCURSOR_i860
+LD =$(TOOLDIR)/bin/ld860 
+LD_FINAL_FLAGS = -p -T f8000000 -e pstart -x
+AS = as860
+RANLIB = ranlib860
+LIBS = $(LIB860)/libsa.a $(NDLIB860)/gcc-runtime860.a
+CRT0 = $(LIB860)/crt0.o
+MIGFLAGS =
+#POST_LD_COMMAND = unixsyms server-$(CPUTYPE)
+POST_LD_COMMAND = unixsyms server-$(CPUTYPE); \
+	cp server-$(CPUTYPE) /tmp/foo; \
+	strip /tmp/foo; \
+	cc -o server $(BINDOBJ) -segcreate __I860 __i860 /tmp/foo \
+	../../libND/libND.a -lNeXT_s -lsys_s

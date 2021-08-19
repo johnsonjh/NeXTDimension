@@ -1,0 +1,129 @@
+Changes to gdb and system done at ORC to make gdb fly under Mach/i386:
+(CB, ORC, Feb-June 89)
+
+1) gdb includes /usr/include/storclass.h via /usr/include/syms.h via
+  /usr/include/a.out.h in coffread.c . Copied /usr/include/storclass
+  onto system and changed /usr/include/syms.h
+
+2) inserted definition for fclose(), fflush() into <stdio.h>
+
+3) included <machine/reg.h> instead of <sys/reg.h> in dep.c
+
+4) in i386-dep.c commented out the floating point printing code
+   since /usr/include/sys/user.h does not yet have support for
+   floating point status.
+
+5) the core file layout has changed. 
+       struct user  0..ctob( UPAGES)-KERNEL_STACK_SIZE
+
+       kernel stack ctob( UPAGES)-KERNEL_STACK_SIZE .. ctob(UPAGES)
+
+       data area   ctob( UPAGES) .. ctob( UPAGES + u.u_dsize)
+
+       stack area  ctob( UPAGES + u.u_dsize) .. ctob( UPAGES + u.u_dsize +
+                                                      u.u_ssize)
+6) setting breakpoints and all that junk:
+gdb starts the debuggee via a fork(), ptrace( 0); execle() sequence.
+The debuggee then psignals( debugger, SIGTRAP). Notice that this
+signal does *not* transit through the Mach exception ports; only
+processor traps send messages on to that port. Hence, the code
+in wait_for_interior (infrun.c) times out on a message and then
+still does the wait3() call; even when using the Mach exception stuff.
+
+Once the debuggee is off & running, breakpoint instructions cause
+the kernel to send messages to the exception port. Gdb receives them,
+calls exc_server which in turn upcalls catch_exception_raise, and
+sends back a reply msg to the kernel. I.e. the kernel does an rpc
+on gdb.
+
+Getting that to work we hit the following kernel bugs:
+-- thread_get_status: there was a bug in mk/i386/pcb.c that
+caused bogus status info to be returned.
+-- int 3 (i.e. breakpoint interrupts) caused the kernel to generate
+a general protection fault (exception 13) because the interrupt gate
+for the breakpoint interrupt had the wrong privileges. It should
+have been allowed to interrupt user level tasks (i.e. the debuggee)
+and not only the kernel. (fix in mk/i386/tables2.c)
+
+GDB used to unrestrict the exception port and then still named the
+port explicitly in wait_for_inferior, instead of using PORT_DEFAULT.
+Changed that to leave exception port restricted (as it is after the 
+port allocation in inflow.c)
+
+7) MACH thread_get_state returns a structure describing a thread's
+state (thread may however not be the current thread). The layout of
+this struct (cf /usr/include/machine/thread_status.h) is however NOT a
+1-1 mapping to the register array defined in m-i386.h. hence, some
+code in i386-dep.c was necessary to get that translation right.
+
+8) Another kernel bug had to do with breakpoints: after hitting a
+breakpoint, gdb overwrites breakpoint instr with the "right" instr,
+puts machine into stepping mode, executes "right" instr, gets another
+trap, and puts back the breakpoint instr. the i386 generates
+a T_SGLSTP fault and that was trapped by the kernel trap handler
+(cf mk/i386/trap.c )
+
+9) in wait_for_inferior, the WAITTYPE w decl had to be made static so
+that single stepping worked properly. If not, and if we're in the MACH
+case, w may contain garbage. This fix comes from Sue LoVerso @ Encore
+and needs to be cleaned up.
+
+10) when chasing down the call chain, it went a bit too far, i.e.
+below main() because i386_frame_num_args (dep.c) didn't test on a NULL
+return from get_prev_frame_info.
+
+11) had to modify infrun.c  to pretend Mach exceptions were UNIX signals
+so that gdb may proceed as it expects... That also fixed the problem
+mentioned in 9); WAITTYPE w is no longer static. Although I have
+tried to catch all MACH exceptions and map them onto their corresponding
+UNIX signals, I might still have missed some.
+
+12) found a bug in coff_read.c that occasionally failed to read
+struct & enum defs on COFF binaries. Don't know why that problem
+only surfaced occasionally (on large binaries, eg. csh).
+
+13) when looking at call stack, gdb occasionally gets confused when
+printing out procedure parameters. (happened with EMACS & VOX)
+More precisely, when tracing 
+   foo( x)
+   register struct bar *x;
+
+gdb did not print out the right value for the register argument.
+This because coffread.c: process_coff_symbol did not treat LOC_REGPARM
+properly. Fixing that still caused the value to be wrong, however, because
+our friends from /mk/i386/pcb.c: thread_getstatus & thread_setstatus 
+completely ignored register %edi & %esi. These are however the
+first two registers that the C compiler allocates for local register
+variables (or arguments for that matter) in functions......
+
+After all that was fixed there still is a caveat here: gdb hits the
+breakpoint upon procedure entry and at that point in time the register
+arguments HAVE NOT YET loaded their new values from the stack where
+the caller pushed the arguments. Hence, gdb prints out the wrong value
+for register arguments until one, two, or three instructions laters
+for the 1st, 2nd, and 3rd register arg. respectively! Fixing that
+requires dabbling with the setting & hitting of breakpoints that
+correspond to procedure entries. I haven't had the time & interest
+to dive into gdb to do that.......
+
+The starting point for that would be in dep.c: i386_skip_prologue().
+
+move from X75 to X79:
+  had to replace /usr/include/signal.h with link to /usr/mk/sys/signal.h
+
+14) coffread.c: read_coff_symtab():
+ C allows you to write:
+	 foo()
+	 { typedef fnc some_function ();
+           ...
+	 }
+ and in that case cs->c_type for symbol fnc is ISFCN too.....!
+ This caused the old (wrong) code to confuse the info of
+ "fnc" with that for "foo". Thus, the test to record symbol
+ information for a beginning function is:
+         if ( ISFCN( cs->c_type) && cs->sclass != C_TPDEF)
+
+15) See the discussion in (13) about register parameters.  There is a
+similar problem with struct parameters.
+
+
